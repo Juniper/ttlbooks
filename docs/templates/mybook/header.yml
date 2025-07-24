@@ -1,0 +1,32 @@
+---
+title: ”Your title"               <<<< EDIT
+subtitle: ”Your Subtitle"         <<<< EDIT
+author: John, Peter               <<<< EDIT
+geometry: margin=2cm
+date: "2025-01-06"                <<<< EDIT
+subject: ”My Topic"               <<<< EDIT
+keywords: [keyword1, keyword2]    <<<< EDIT
+lang: "en"
+titlepage: true
+titlepage-text-color: "FFFFFF"
+titlepage-rule-color: "FFFFFF"
+titlepage-rule-height: 0
+titlepage-background: "../../../rendering/background.pdf"
+logo-width: 30mm
+header-left: "\\thetitle"
+header-center: "\\leftmark"
+header-right: "\\theauthor"
+footer-left: "\\leftmark"
+footer-center: "Page \\thepage"
+footer-right: "\\leftmark"
+toc: true
+lof: true
+lot: true
+toc-own-page: true
+lof-own-page: true
+lot-own-page: true
+footnotes-pretty: true
+link-citations: true
+link-headers: true
+colorlinks: true
+---

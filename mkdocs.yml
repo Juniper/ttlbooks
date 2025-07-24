@@ -1,0 +1,75 @@
+site_name: TTLBooks - A technical eBook collection by Juniper 
+nav:
+  - Home: index.md
+  - All Books:
+    - Select a book: books/menu/main.md
+    - Sample Book: books/sample_book/main.md
+  - Download PDFs: download.md
+  - About us: about.md
+site_dir: '/var/www2/html'
+docs_dir: 'docs'
+site_author: Juniper TME
+theme:
+  name: material
+  favicon: images/favicon.ico
+  logo: images/favicon.ico
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode 
+    - media: "(prefers-color-scheme: dark)"  
+      scheme: slate
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+  font:
+    text: Google Sans
+    code: Nova
+  features:
+    - toc.follow
+    - navigation.top
+    - navigation.tabs
+    - navigation.instant
+    - navigation.footer
+    - navigation.indexes
+    - search.suggest
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - content.action.edit
+    - content.tooltips
+    - content.footnote.tooltips
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/juniper-networks
+    - icon: fontawesome/brands/github
+      link: https://github.com/juniper
+  generator: false
+copyright: "This site is maintained by Juniper Network employees. Powered by Material for MkDocs"
+plugins:
+  - search:
+      separator: '[\s\-\_]'
+  - minify:
+      minify_html: true
+markdown_extensions:
+  - pymdownx.extra
+  - markdown_katex
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      linenums: true 
+      guess_lang: false  
+      use_pygments: true  
+extra_css:
+  - https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css
+  - stylesheets/extra.css
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js
+  - /addon/math-render.js
+  - /addon/pdf-list.json

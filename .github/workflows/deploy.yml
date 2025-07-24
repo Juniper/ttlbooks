@@ -1,0 +1,123 @@
+name: Build and Deploy MkDocs Site + PDFs
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write 
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Pandoc
+        run: |
+          wget https://github.com/jgm/pandoc/releases/download/3.5/pandoc-3.5-1-amd64.deb
+          sudo dpkg -i pandoc-3.5-1-amd64.deb
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-latex-recommended \
+                                  texlive-fonts-recommended texlive-fonts-extra
+
+      - name: Copy Pandoc templates
+        run: |
+          sudo mkdir -p /usr/share/pandoc/data/templates
+          sudo cp templates/custom.latex /usr/share/pandoc/data/templates/custom.latex
+          sudo cp templates/listings-setup.tex /usr/share/pandoc/data/templates/listings-setup.tex
+
+      - name: Install Python and MkDocs dependencies
+        run: |
+          sudo apt-get install -y python3-pip
+          python3 -m pip config set global.break-system-packages true
+          pip install mkdocs
+          pip install mkdocs-material pymdown-extensions
+          pip install mkdocs-material[extras]
+          pip install markdown-katex
+          pip install mkdocs-gen-files
+          pip install mkdocs-minify-plugin
+
+      - name: Install PDF utilities
+        run: |
+          sudo apt-get install -y poppler-utils
+
+      - name: Build MkDocs site
+        run: |
+          mkdocs build
+
+      - name: Build PDFs from books
+        run: |
+          PDF_DIR=site/download
+          echo "Saving PDFs to $PDF_DIR"
+          mkdir -p "$PDF_DIR"
+          cd docs/books
+          book_dirs=$(find . -mindepth 1 -maxdepth 1 -type d ! -name '.*')
+          if [ -z "$book_dirs" ]; then echo "No book directories found. Skipping PDF build."; exit 0; fi
+
+          for book in */; do
+            if [ "${book%/}" = "menu" ]; then
+              echo "Skipping $book"
+              continue
+            fi
+            echo "Processing $book"
+            cd "$book"
+            md_files="main.md"
+
+            if ls chapter*.md 1>/dev/null 2>&1; then
+              for chapter in $(ls chapter*.md | sort -V); do
+                md_files="$md_files $chapter"
+              done
+            fi
+
+            if [ -n "$md_files" ]; then
+              cat /dev/null > combined.md
+              for file in $md_files; do
+                sed '/^---$/,/^---$/d' "$file" >> combined.md
+                echo "" >> combined.md
+              done
+              sed -i -e 's/<a\s*[^>]*id="\([^"]*\)"[^>]*>/\\label{\1}/g' -e 's/\xC2\xA0/ /g' combined.md
+              pandoc -s --listings --template "/usr/share/pandoc/data/templates/custom.latex" \
+                     --metadata-file header.yml --output="${book%/}.pdf" combined.md
+              if [ -f "${book%/}.pdf" ]; then
+                echo "PDF generated successfully for $book"
+                cp "${book%/}.pdf" "../../../$PDF_DIR/"
+              else
+                echo "PDF generation failed for $book"
+              fi
+            fi
+            cd ..
+          done
+
+      - name: Generate pdf-list.json and thumbnails
+        run: |
+          PDF_DIR=site/download
+          OUTPUT_FILE="$PDF_DIR/pdf-list.json"
+
+          if [ ! -d "$PDF_DIR" ]; then
+              echo "Warning: $PDF_DIR does not exist. Creating empty list."
+              echo "[]" > "$OUTPUT_FILE"
+              exit 0
+          fi
+
+          pdf_files=()
+          for file in "$PDF_DIR"/*.pdf; do
+              [ -e "$file" ] || continue
+              pdf_name=$(basename "$file" .pdf)
+              pdf_files+=("\"$pdf_name.pdf\"")
+              pdftoppm -png -f 1 -l 1 -singlefile "$file" "$PDF_DIR/$pdf_name"
+              echo "Generated icon for $pdf_name"
+          done
+
+          pdf_files_json=$(IFS=, ; echo "[${pdf_files[*]}]")
+          echo "$pdf_files_json" > "$OUTPUT_FILE"
+          echo "Generated $OUTPUT_FILE"
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site

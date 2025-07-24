@@ -20,7 +20,7 @@ This is the place to download all our contents in PDF.
     // Fetch the PDF list from the JSON file
     async function fetchPDFList() {
         try {
-            const response = await fetch('./pdf-list.json');
+            const response = await fetch('./download/pdf-list.json');
             const pdfList = await response.json();
             populateCarousel(pdfList);
         } catch (error) {
@@ -45,7 +45,7 @@ This is the place to download all our contents in PDF.
                 <img src="${pdfIcon}" alt="PDF Icon" class="pdf-icon">
                 <p>${pdfName}</p>
             `;
-            pdfItem.addEventListener('click', () => openPDF(`${pdfPath}`));
+            pdfItem.addEventListener('click', () => openPDF(`./download/${pdfPath}`));
             carouselItemsContainer.appendChild(pdfItem);
         });
     }

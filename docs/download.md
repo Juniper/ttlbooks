@@ -38,7 +38,7 @@ This is the place to download all our contents in PDF.
             const iconName = pdfName.replace('.pdf', '.png');  // Replace .pdf with .png for the icon
             
             // Assuming the icon files are located in the same directory as PDFs, you can update the path here
-            const pdfIcon = `${iconName}`;  
+            const pdfIcon = `./download/${iconName}`;  
             const pdfItem = document.createElement('div');
             pdfItem.classList.add('carousel-item');
             pdfItem.innerHTML = `

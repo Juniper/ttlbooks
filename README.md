@@ -1,10 +1,8 @@
 # TTLBooks
 
-<center>
-
-![Alt text](docs/images/jnpr_logo.png)
-
-</center>
+<p align="center">
+  <img src="docs/images/jnpr_logo.png" alt="Alt text" />
+</p>
 
 ## 📚 Juniper eBooks Repository
 

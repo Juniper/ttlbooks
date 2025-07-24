@@ -6,8 +6,8 @@ nav:
     - Sample Book: books/sample_book/main.md
   - Download PDFs: download.md
   - About us: about.md
-use_directory_urls: false
 docs_dir: 'docs'
+use_directory_urls: false
 site_author: Juniper TME
 theme:
   name: material

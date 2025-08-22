@@ -64,11 +64,10 @@ jobs:
         if: github.ref != 'refs/heads/main'
         run: |
           BRANCH="${{ github.ref_name }}"
-          cat > docs/index.md <<EOL
-# WORK IN PROGRESS
-
-This is the branch work page **$BRANCH**
-EOL
+          mkdir -p docs
+          echo "# WORK IN PROGRESS
+          This is the branch work page **$BRANCH**" > docs/index.md
+          
       - name: Build MkDocs site
         run: |
           mkdocs build

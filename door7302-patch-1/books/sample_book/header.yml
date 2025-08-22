@@ -1,0 +1,32 @@
+---
+title: Filter Based Forwarding on MX
+subtitle: Several examples of FBF on MX
+author: David Roy
+geometry: margin=2cm
+date: "2025-04-10"
+subject: ”FBF on MX"
+keywords: [FBF, PBR, MX]
+lang: "en"
+titlepage: true
+titlepage-text-color: "FFFFFF"
+titlepage-rule-color: "FFFFFF"
+titlepage-rule-height: 0
+titlepage-background: "../../../rendering/background.pdf"
+logo-width: 30mm
+header-left: "\\thetitle"
+header-center: "\\leftmark"
+header-right: "\\theauthor"
+footer-left: "\\leftmark"
+footer-center: "Page \\thepage"
+footer-right: "\\leftmark"
+toc: true
+lof: true
+lot: true
+toc-own-page: true
+lof-own-page: true
+lot-own-page: true
+footnotes-pretty: true
+link-citations: true
+link-headers: true
+colorlinks: true
+---

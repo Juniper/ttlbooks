@@ -153,3 +153,38 @@ jobs:
           publish_dir: ./site
           keep_files: true
           destination_dir: ${{ github.ref_name != 'main' && github.ref_name || '' }}
+
+      - name: Clean up old branch previews
+        if: github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          # Folder where branch previews are deployed inside gh-pages branch
+          PAGES_ROOT=./site  # adjust if different
+
+          echo "Fetching list of active branches..."
+          ACTIVE_BRANCHES=$(gh api repos/${GITHUB_REPOSITORY}/branches --jq '.[].name')
+
+          echo "Active branches:"
+          echo "$ACTIVE_BRANCHES"
+
+          echo "Scanning deployed branch previews..."
+          for dir in "$PAGES_ROOT"/*; do
+            if [ -d "$dir" ]; then
+              branch_name=$(basename "$dir")
+              # Skip main site folder if any
+              if [ "$branch_name" = "main" ]; then
+                continue
+              fi
+
+              # Check if the branch is active
+              if ! echo "$ACTIVE_BRANCHES" | grep -qw "$branch_name"; then
+                echo "Removing obsolete preview folder: $branch_name"
+                rm -rf "$dir"
+              else
+                echo "Keeping active branch folder: $branch_name"
+              fi
+            fi
+          done

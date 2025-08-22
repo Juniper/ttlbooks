@@ -3,58 +3,49 @@ import os
 import sys
 import yaml
 
-def filter_nav(nav, branch):
-    """
-    Recursively filter nav to only keep entries containing the branch path.
-    """
-    filtered = []
-    found = False
+branch = os.environ.get("BRANCH")
+if not branch:
+    print("Error: BRANCH environment variable not set", file=sys.stderr)
+    sys.exit(1)
 
+mkdocs_file = "mkdocs.yml"
+with open(mkdocs_file) as f:
+    config = yaml.safe_load(f)
+
+# Update site_name
+config["site_name"] = f"TTL Books - This is a work in progress site for the branch {branch}"
+
+def filter_nav(nav):
+    """
+    Recursively filter nav items: keep only those that contain the branch in their path,
+    and preserve parent items if they lead to branch files.
+    """
+    new_nav = []
     for item in nav:
         if isinstance(item, dict):
             key, value = list(item.items())[0]
-
-            if isinstance(value, list):
-                # Recurse into submenus
-                sub_filtered, sub_found = filter_nav(value, branch)
-                if sub_found:
-                    filtered.append({key: sub_filtered})
-                    found = True
-            elif isinstance(value, str):
-                if f"books/{branch}/" in value:
-                    filtered.append({key: value})
-                    found = True
+            if isinstance(value, str):
+                if branch in value:
+                    new_nav.append({key: value})
+            elif isinstance(value, list):
+                filtered_children = filter_nav(value)
+                if filtered_children:
+                    # Rename "All Books" -> "Your Book"
+                    if key == "All Books":
+                        key = "Your Book"
+                    new_nav.append({key: filtered_children})
         else:
-            # nav entries should always be dicts, but just in case
-            if isinstance(item, str) and f"books/{branch}/" in item:
-                filtered.append(item)
-                found = True
+            if branch in str(item):
+                new_nav.append(item)
+    return new_nav
 
-    return filtered, found
+filtered_nav = filter_nav(config.get("nav", []))
 
-def main():
-    branch = os.environ.get("BRANCH")
-    if not branch:
-        print("Error: BRANCH environment variable not set", file=sys.stderr)
-        sys.exit(1)
+if not filtered_nav:
+    print(f"Error: No nav entries found for branch '{branch}'", file=sys.stderr)
+    sys.exit(1)
 
-    with open("mkdocs.yml", "r") as f:
-        config = yaml.safe_load(f)
+config["nav"] = filtered_nav
 
-    # Patch site_name
-    config["site_name"] = f"TTL Books - This is a work in progress site for the branch {branch}"
-
-    # Patch nav
-    if "nav" in config:
-        filtered_nav, found = filter_nav(config["nav"], branch)
-        if not found:
-            print(f"Error: branch '{branch}' not found in mkdocs.yml nav", file=sys.stderr)
-            sys.exit(1)
-        config["nav"] = filtered_nav
-
-    # Save patched mkdocs.yml
-    with open("mkdocs.yml", "w") as f:
-        yaml.dump(config, f, sort_keys=False, width=1000)
-
-if __name__ == "__main__":
-    main()
+with open(mkdocs_file, "w") as f:
+    yaml.dump(config, f, sort_keys=False)

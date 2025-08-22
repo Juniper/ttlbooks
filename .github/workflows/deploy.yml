@@ -58,8 +58,8 @@ jobs:
         run: |
           BRANCH="${{ github.ref_name }}"
           pip install pyyaml
-          BRANCH=$BRANCH python3 scripts/patch_mkdocs.py
-
+          BRANCH=$BRANCH python3 .github/scripts/patch_mkdocs.py
+          
       - name: Build MkDocs site
         run: |
           mkdocs build

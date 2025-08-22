@@ -1,0 +1,1496 @@
+<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=author content="Juniper TME"><link rel=icon href=../../images/favicon.ico><meta name=generator content="mkdocs-1.6.1, mkdocs-material-9.6.9"><title>Goal of this Article - TTL Books - This is a work in progress site for the branch mx_book_5G</title><link rel=stylesheet href=../../assets/stylesheets/main.4af4bdda.min.css><link rel=stylesheet href=../../assets/stylesheets/palette.06af60db.min.css><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Google+Sans:300,300i,400,400i,700,700i%7CNova:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Google Sans";--md-code-font:"Nova"}</style><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css><link rel=stylesheet href=../../stylesheets/extra.css><script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script></head> <body dir=ltr data-md-color-scheme=default data-md-color-primary=indigo data-md-color-accent=indigo> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#goal-of-this-article class=md-skip> Skip to content </a> </div> <div data-md-component=announce> </div> <header class=md-header data-md-component=header> <nav class="md-header__inner md-grid" aria-label=Header> <a href=../.. title="TTL Books - This is a work in progress site for the branch mx_book_5G" class="md-header__button md-logo" aria-label="TTL Books - This is a work in progress site for the branch mx_book_5G" data-md-component=logo> <img src=../../images/favicon.ico alt=logo> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> TTL Books - This is a work in progress site for the branch mx_book_5G </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> Goal of this Article </span> </div> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme=default data-md-color-primary=indigo data-md-color-accent=indigo aria-label="Switch to dark mode" type=radio name=__palette id=__palette_0> <label class="md-header__button md-icon" title="Switch to dark mode" for=__palette_1 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg> </label> <input class=md-option data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme=slate data-md-color-primary=indigo data-md-color-accent=indigo aria-label="Switch to light mode" type=radio name=__palette id=__palette_1> <label class="md-header__button md-icon" title="Switch to light mode" for=__palette_0 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg> </label> </form> <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=Search placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg> </label> <nav class=md-search__options aria-label=Search> <button type=reset class="md-search__icon md-icon" title=Clear aria-label=Clear tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg> </button> </nav> <div class=md-search__suggest data-md-component=search-suggest></div> </form> <div class=md-search__output> <div class=md-search__scrollwrap tabindex=0 data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> Initializing search </div> <ol class=md-search-result__list role=presentation></ol> </div> </div> </div> </div> </div> </nav> </header> <div class=md-container data-md-component=container> <nav class=md-tabs aria-label=Tabs data-md-component=tabs> <div class=md-grid> <ul class=md-tabs__list> <li class=md-tabs__item> <a href=../mx_book_5G/main.html class=md-tabs__link> All Books </a> </li> </ul> </div> </nav> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary md-nav--lifted" aria-label=Navigation data-md-level=0> <label class=md-nav__title for=__drawer> <a href=../.. title="TTL Books - This is a work in progress site for the branch mx_book_5G" class="md-nav__button md-logo" aria-label="TTL Books - This is a work in progress site for the branch mx_book_5G" data-md-component=logo> <img src=../../images/favicon.ico alt=logo> </a> TTL Books - This is a work in progress site for the branch mx_book_5G </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_1> <label class=md-nav__link for=__nav_1 id=__nav_1_label tabindex=0> <span class=md-ellipsis> All Books </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=1 aria-labelledby=__nav_1_label aria-expanded=false> <label class=md-nav__title for=__nav_1> <span class="md-nav__icon md-icon"></span> All Books </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle " type=checkbox id=__nav_1_1> <label class=md-nav__link for=__nav_1_1 id=__nav_1_1_label tabindex=0> <span class=md-ellipsis> Ceci est un test </span> <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav data-md-level=2 aria-labelledby=__nav_1_1_label aria-expanded=false> <label class=md-nav__title for=__nav_1_1> <span class="md-nav__icon md-icon"></span> Ceci est un test </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../mx_book_5G/main.html class=md-nav__link> <span class=md-ellipsis> Chapitre 1 </span> </a> </li> <li class=md-nav__item> <a href=../mx_book_5G/chapter1.html class=md-nav__link> <span class=md-ellipsis> Chapitre 2 </span> </a> </li> <li class=md-nav__item> <a href=../mx_book_5G/chapter2.html class=md-nav__link> <span class=md-ellipsis> Chapitre 3 </span> </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=sidebar data-md-type=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary" aria-label="Table of contents"> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> Table of contents </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#case-1-fbf-using-next-ip-next-interface-actions class=md-nav__link> <span class=md-ellipsis> Case 1 - FBF Using next-ip / next-interface Actions </span> </a> <nav class=md-nav aria-label="Case 1 - FBF Using next-ip / next-interface Actions"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#overall-behavior class=md-nav__link> <span class=md-ellipsis> Overall Behavior </span> </a> </li> <li class=md-nav__item> <a href=#caveats class=md-nav__link> <span class=md-ellipsis> Caveats </span> </a> </li> <li class=md-nav__item> <a href=#example-1-topology class=md-nav__link> <span class=md-ellipsis> Example 1 - topology </span> </a> </li> <li class=md-nav__item> <a href=#pfe-analysis class=md-nav__link> <span class=md-ellipsis> PFE analysis </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#case-2-fbf-using-forwarding-instance class=md-nav__link> <span class=md-ellipsis> Case 2 - FBF Using forwarding instance </span> </a> <nav class=md-nav aria-label="Case 2 - FBF Using forwarding instance"> <ul class=md-nav__list> <li class=md-nav__item> <a href=#rib-group-concept class=md-nav__link> <span class=md-ellipsis> rib-group Concept </span> </a> </li> <li class=md-nav__item> <a href=#example-2-topology class=md-nav__link> <span class=md-ellipsis> Example 2 - Topology </span> </a> </li> <li class=md-nav__item> <a href=#pfe-analysis_1 class=md-nav__link> <span class=md-ellipsis> PFE analysis </span> </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#conclusion class=md-nav__link> <span class=md-ellipsis> Conclusion </span> </a> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <h1 id=goal-of-this-article>Goal of this Article<a class=headerlink href=#goal-of-this-article title="Permanent link">&para;</a></h1> <p><strong>/!\ This is a copy of an existing Techpost just for illustration purposes</strong> </p> <p>This article provides a detailed overview of Filter-Based Forwarding (<strong>FBF</strong>), also known as Policy-Based Routing (<strong>PBR</strong>), on MX Series routers (AFT), using common deployment scenarios to illustrate configuration methods. </p> <p>The Filter-Based Forwarding (FBF) concept is relatively simple. On ingress, filtering (via the Firewall Filter toolkit) is applied <em>before</em> the the source or destination route lookup. The diagram below illustrates this process. In a standard routing scenario without any constraints, the destination IP from the IP datagram is used for a rou te lookup (using Longest Prefix Match<sup id=fnref:1><a class=footnote-ref href=#fn:1>1</a></sup>), which returns a next-hop and an associated egress interface. (Encapsulation may occur prior to egress.)</p> <p>With FBF, we alter the ingress lookup behavior in one of the following ways:</p> <ul> <li>Forcing traffic to exit through a specific egress port;</li> <li>Using a "proxy" or alias IP address as the lookup key (as shown in our example below);</li> <li>Leveraging a specific, constrained forwarding instance to influence the lookup outcome.</li> </ul> <p><img alt="FBF concepts" src=images/diag0.png></p> <p>To summarize, on Juniper platforms, FBF can generally be implemented using two main approaches. The first is more straightforward and involves minimal configuration, but offers limited flexibility. It uses a single firewall filter to directly redirect traffic. The second approach requires slightly more configuration but offers more granular traffic handling.</p> <p>All examples are based on Junos OS release <strong>24.2</strong>. We’ll begin with the simpler method.</p> <h2 id=case-1-fbf-using-next-ip-next-interface-actions>Case 1 - FBF Using next-ip / next-interface Actions<a class=headerlink href=#case-1-fbf-using-next-ip-next-interface-actions title="Permanent link">&para;</a></h2> <p><a href="https://deepthought.juniper.net/app/do/showView?taskCode=all&record_code=14784-1&tableName=RLI&record_number=14784">RLI 14784</a> introduces two new terminating actions in firewall filters:</p> <ul> <li>next-interface <intf-name> routing-instance <ri-name></li> <li>next-ip <prefix> routing-instance <ri-name></li> </ul> <blockquote> <p><strong>Note:</strong> IPv6 is also supported via the <code>next-ip6</code> variant.</p> </blockquote> <p>These actions are <strong>terminating</strong>, meaning there's no need to include an explicit <code>accept</code> statement. Both are supported under the <code>inet</code> and <code>inet6</code> families.</p> <p>The typical usage for these actions is illustrated below:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span>
+<span class=normal>19</span>
+<span class=normal>20</span>
+<span class=normal>21</span>
+<span class=normal>22</span>
+<span class=normal>23</span>
+<span class=normal>24</span>
+<span class=normal>25</span>
+<span class=normal>26</span>
+<span class=normal>27</span>
+<span class=normal>28</span>
+<span class=normal>29</span>
+<span class=normal>30</span>
+<span class=normal>31</span></pre></div></td><td class=code><div><pre><span></span><code>firewall {
+    family inet|inet6 {
+      filter foo {
+        from { 
+          Any from the set of ip match conditions
+        } then {
+          next-interface &lt;intf-name&gt; routing-instance &lt;RI-name&gt;
+      }
+    }
+  }
+
+  family inet {
+      filter foo4 {
+        from { 
+          Any from the set of ipv4 match conditions
+        } then {
+          next-ip &lt;prefix&gt; routing-instance &lt;RI-name&gt;
+      }
+    }
+  }
+
+  family inet6 {
+      filter foo6 {
+        from { 
+          Any from the set of ipv6 match conditions
+        } then {
+          next-ip6 &lt;prefix&gt; routing-instance &lt;RI-name&gt;
+      }
+    }
+  }
+}
+</code></pre></div></td></tr></table></div> <h3 id=overall-behavior>Overall Behavior<a class=headerlink href=#overall-behavior title="Permanent link">&para;</a></h3> <p>When a packet matches a term using one of the below actions:</p> <ul> <li><strong><code>next-interface</code></strong>: The system verifies the operational state of the specified interface, along with the availability of an ARP (or ND for IPv6) entry for the next-hop. If a <code>routing-instance</code> is specified, the interface lookup is performed within that context. If all conditions are met, the packet is forwarded via the corresponding egress IFL. If the interface is down or unresolved, the packet is dropped.</li> <li><strong><code>next-ip(6)</code></strong>: The IP address specified in <code>next-ip</code> or <code>next-ip6</code> is not automatically resolved. On Ethernet interfaces, reachability must be ensured through routing—either via dynamic protocols or static routes. If a matching route (exact or more specific) is found, the packet follows the next-hop associated with that route. If no matching route exists, the packet is <strong>rejected</strong>.</li> </ul> <p>Read carefully: if next-ip address becomes unreachable the default approch is to point the traffic to the default reject next-hop. Traffic rejected are thus punted to the RE for sending back an ICMP unreachable. However, no worries about "overloading" the internal host-path. Indeed, there is a default DDOS protection policer that will rate-limit those rejected punted packets to 2Kpps. We will see later, how to handle this behavior in case you want silencly discard the packet when next-ip address becomes unreachable. </p> <h3 id=caveats>Caveats<a class=headerlink href=#caveats title="Permanent link">&para;</a></h3> <p>Known limitations include:</p> <ul> <li>Supported only for <strong>ingress</strong> filtering</li> <li>No fallback mechanism (The EVO <strong>exact</strong> match option is not supported)</li> <li>Not supported on <strong>LT</strong> interfaces</li> </ul> <h3 id=example-1-topology>Example 1 - topology<a class=headerlink href=#example-1-topology title="Permanent link">&para;</a></h3> <p>The diagram below illustrates the topology used to demonstrate simple FBF on an MX platform.<br> The Device Under Test (<strong>DUT</strong>) is an <strong>MX480</strong> equipped with an <strong>MPC10E</strong> line card.</p> <p>This simplified setup represents a typical <strong>DCI</strong> router connected to an <strong>IP Fabric</strong>, providing access to remote resources via two distinct paths:</p> <ul> <li>A <strong>quality</strong> path through an <strong>MPLS/SR</strong> core network, and</li> <li>A <strong>best-effort</strong> path via a <strong>direct peering or transit (PNI)</strong> connection.</li> </ul> <p>By default, remote resources are reached via the direct PNI link. The DUT hosts an <strong>Internet VRF</strong>, which is also used by a remote <strong>ASBR</strong> in the same AS. This ASBR advertises "public/remote" prefixes to all PE routers—including the DUT—via <strong>L3VPN (inet-vpn)</strong>. The direct PNI interface is also part of the Internet VRF.</p> <p><img alt="Network topology" src=images/diag1.png></p> <p>For demonstration purposes, the remote resource is simulated using the public prefix <strong>8.8.8.0/24</strong>. This prefix is preferred by default via the direct PNI, with a backup path available through the MPLS/SR core:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span></pre></div></td><td class=code><div><pre><span></span><code>regress@rtme-mx-62&gt; show route 8.8.8.0/24 
+
+VRF1.inet.0: 9 destinations, 13 routes (9 active, 0 holddown, 0 hidden)
++ = Active Route, - = Last Active, * = Both
+
+8.8.8.0/24         *[BGP/170] 00:00:04, localpref 10000
+                      AS path: 1234 6000 I, validation-state: unverified
+                    &gt;  to 172.16.8.1 via et-2/0/0.0                             &lt;&lt;&lt; Via PNI
+                    [BGP/170] 21:23:18, localpref 100, from 193.252.102.201
+                      AS path: I, validation-state: unverified
+                    &gt;  to 172.16.1.1 via et-5/0/0.0, Push 16, Push 20103(top)   &lt;&lt;&lt; Via MPLS/SR Core
+</code></pre></div></td></tr></table></div> <p>The IP Fabric serves two customer types—<strong>A</strong> and <strong>B</strong>—represented by IP prefixes <strong>172.111.0.0/24</strong> and <strong>172.222.0.0/24</strong>, respectively. The DUT exchanges IP traffic with these customers directly.</p> <p><strong>Initial Configuration</strong></p> <p>Below is the initial configuration for the DUT's <strong>Internet VRF</strong>, kept simple for clarity:</p> <ul> <li>The DUT receives customer prefixes via <strong>eBGP</strong> from the peer group <strong>FABRIC</strong>.</li> <li>It receives public prefixes from the peer ASBR via <strong>eBGP</strong>, with an import policy (<strong>PREF</strong>) setting a high <strong>local preference</strong> to make this path the best.</li> <li>Two interfaces belong to the Internet VRF—one facing the IP Fabric, and the other towards the PNI peer.</li> <li>The DUT also connects to the MPLS core, running <strong>IS-IS with Segment Routing</strong> for label distribution.</li> </ul> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span>
+<span class=normal>19</span>
+<span class=normal>20</span>
+<span class=normal>21</span>
+<span class=normal>22</span>
+<span class=normal>23</span>
+<span class=normal>24</span>
+<span class=normal>25</span>
+<span class=normal>26</span>
+<span class=normal>27</span></pre></div></td><td class=code><div><pre><span></span><code>regress@rtme-mx-62&gt; show configuration routing-instances VRF1 
+instance-type vrf;
+protocols {
+    bgp {
+        group FABRIC {
+            type external;
+            local-address 172.16.0.4;
+            peer-as 5000;
+            neighbor 172.16.0.5;
+        }
+        group PEER {
+            type external;
+            local-address 172.16.8.0;
+            import PREF;
+            family inet {
+                unicast;
+            }
+            peer-as 1234;
+            neighbor 172.16.8.1;
+        }
+    }
+}
+interface et-4/0/0.0;
+interface et-5/2/0.100;
+route-distinguisher 193.252.102.101:1;
+vrf-target target:65000:1234;
+vrf-table-label;
+</code></pre></div></td></tr></table></div> <p><strong>Configuration of FBF</strong></p> <p>Using the previous topology, we demonstrate a typical FBF use case leveraging the <strong><code>next-ip</code></strong> action (the same behavior applies to <strong><code>next-ip6</code></strong> and <strong><code>next-interface</code></strong>).</p> <p>The objective is to override the default forwarding behavior—where traffic exits via the direct PNI interface—for traffic sourced from <strong>Customer B</strong> (<strong>172.222.0.0/24</strong>). Instead, traffic from this prefix should be redirected through the <strong>MPLS backbone</strong>, targeting the remote ASBR to reach the public resource.</p> <p>Traffic from other sources will continue to follow the default “best path,” which remains the direct PNI link.</p> <p>The diagram below illustrates this behavior:</p> <p><img alt="Source based forwarding with next-ip" src=images/diag2.png></p> <p><strong>How will we achieve this?</strong></p> <p>The configuration is straightforward. First, we define a firewall filter that matches the source prefix <strong>172.222.0.0/24</strong>, and apply the <code>next-ip</code> action to redirect traffic.</p> <p>Which <code>next-ip</code> address should be used?<br> That depends on the network design. In this example, we target the <strong>loopback address of the remote ASBR</strong>, which is advertised via <strong>BGP (L3VPN)</strong>. As shown below, the route to this loopback is reachable through the MPLS/SR core via an established tunnel:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span>
+<span class=normal>4</span>
+<span class=normal>5</span>
+<span class=normal>6</span>
+<span class=normal>7</span>
+<span class=normal>8</span></pre></div></td><td class=code><div><pre><span></span><code>regress@rtme-mx-62&gt; show route 192.168.1.1 table VRF1.inet   
+
+VRF1.inet.0: 9 destinations, 13 routes (9 active, 0 holddown, 0 hidden)
++ = Active Route, - = Last Active, * = Both
+
+192.168.1.1/32     *[BGP/170] 20:42:26, localpref 100, from 193.252.102.201
+                      AS path: I, validation-state: unverified
+                    &gt;  to 172.16.1.1 via et-5/0/0.0, Push 16, Push 20103(top)
+</code></pre></div></td></tr></table></div> <p>Now let's configure the FBF filter. Since we're operating within a <strong>VRF context</strong>, the <code>routing-instance</code> parameter is specified along with the <code>next-ip</code> action—this ensures that the next-hop lookup is performed in the correct <strong>FIB instance</strong>.</p> <p>An additional term is included to match all remaining traffic, allowing it to follow the default forwarding behavior.</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span>
+<span class=normal>19</span>
+<span class=normal>20</span>
+<span class=normal>21</span></pre></div></td><td class=code><div><pre><span></span><code>family inet {
+    filter FBF {
+        term PBR_CUSTOMER_B {
+            from {
+                source-address {
+                    172.222.0.0/24;
+                }
+            }
+            then {
+                count CUSTOMERB;
+                next-ip 192.168.1.1/32 routing-instance VRF1;
+            }
+        }
+        term OTHER {
+            then {
+                count OTHER;
+                accept;
+            }
+        }
+    }
+}
+</code></pre></div></td></tr></table></div> <p>Before applying the filter, we'll generate traffic from <strong>Customer A</strong> and <strong>Customer B</strong>. To distinguish between the two flows, we configure the traffic rates as follows:</p> <ul> <li><strong>Customer A</strong>: 1000 packets per second (pps)</li> <li><strong>Customer B</strong>: 5000 packets per second (pps)</li> </ul> <p>Both customers will send traffic toward the <strong>8.8.8.0/24</strong> prefix.</p> <p>We now start the traffic and verify the statistics on the <strong>PNI interface</strong>:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span>
+<span class=normal>4</span>
+<span class=normal>5</span>
+<span class=normal>6</span>
+<span class=normal>7</span>
+<span class=normal>8</span>
+<span class=normal>9</span></pre></div></td><td class=code><div><pre><span></span><code>regress@rtme-mx-62&gt; monitor interface et-2/0/0.0   
+
+&lt;- truncated output -&gt;
+
+Remote statistics:
+  Input bytes:                 132708516 (0 bps)                           [0]
+  Output bytes:              48292808336 (23518344 bps)             [11195520]
+  Input packets:                  270844 (0 pps)                           [0]
+  Output packets:               98556757 (6000 pps)                    [22848] &lt;&lt;&lt; Customer A + Customer B traffics
+</code></pre></div></td></tr></table></div> <p>At this point, all traffic is following the best active path—via the <strong>PNI interface</strong>—to reach the <strong>8.8.8.0/24</strong> prefix.</p> <p>We now apply the <strong>FBF filter</strong> in the <strong>ingress</strong> direction on the interface connected to the <strong>IP Fabric</strong>:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span>
+<span class=normal>4</span>
+<span class=normal>5</span></pre></div></td><td class=code><div><pre><span></span><code>edit private
+
+set interfaces et-5/2/0 unit 100 family inet filter input FBF
+
+commit comment &quot;ADD_FBF&quot; and-quit
+</code></pre></div></td></tr></table></div> <p>And then, recheck the PNI interface statistics: </p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span></pre></div></td><td class=code><div><pre><span></span><code>regress@rtme-mx-62&gt; monitor interface et-2/0/0.0   
+Interface: et-2/0/0.0, Enabled, Link is Up
+
+&lt;- truncated output -&gt;
+
+Remote statistics:
+  Input bytes:                 132708516 (0 bps)                           [0]
+  Output bytes:              49128737556 (3921056 bps)                     [0]
+  Input packets:                  270844 (0 pps)                           [0]
+  Output packets:              100262735 (1000 pps)                        [0] &lt;&lt;&lt; Only Customer A traffic
+</code></pre></div></td></tr></table></div> <p>The <strong>FBF filter</strong> is functioning as expected. Only <strong>Customer A</strong> traffic continues to follow the default best path toward <strong>8.8.8.0/24</strong> via the PNI interface.</p> <p>Next, we check the statistics on the <strong>core-facing interfaces</strong> to confirm that <strong>Customer B</strong> traffic is being properly redirected through the <strong>SR/MPLS tunnel</strong> as intended by the FBF configuration:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span></pre></div></td><td class=code><div><pre><span></span><code>regress@rtme-mx-62&gt; monitor interface et-5/0/0.0  
+Interface: et-5/0/0.0, Enabled, Link is Up
+
+&lt;- truncated output -&gt;
+
+Remote statistics:
+  Input bytes:                 253750639 (584 bps)                         [0]
+  Output bytes:              57241664165 (19600072 bps)                    [0]
+  Input packets:                  533880 (1 pps)                           [0]
+  Output packets:              116839924 (5000 pps)                        [0] &lt;&lt;&lt; the tunneled Customer B traffic 
+</code></pre></div></td></tr></table></div> <p>Everything looks good! To demonstrate that there is no fallback mechanism with <strong>next-ip</strong>-based FBF, we'll remove the <strong>loopback (192.168.1.1/32)</strong> announcement from the ASBR. As a result, the <strong>DUT</strong> will no longer have a route to the loopback, and the traffic will be dropped:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span></pre></div></td><td class=code><div><pre><span></span><code>regress@rtme-mx-62&gt; show route 192.168.1.1 table VRF1.inet   
+</code></pre></div></td></tr></table></div> <p>This means that traffic from <strong>Customer B</strong> should be dropped, which is exactly what we observe. As shown below, there is no longer any traffic on the <strong>Core interface</strong>, and <strong>Customer A</strong> traffic continues to flow through the <strong>PNI port</strong>.</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span>
+<span class=normal>19</span>
+<span class=normal>20</span>
+<span class=normal>21</span></pre></div></td><td class=code><div><pre><span></span><code>regress@rtme-mx-62&gt; monitor interface et-5/0/0.0  
+Interface: et-5/0/0.0, Enabled, Link is Up
+
+&lt;- truncated output -&gt;
+
+Remote statistics:
+  Input bytes:                 253763429 (248 bps)                         [0]
+  Output bytes:              58533097602 (0 bps)                          [57]
+  Input packets:                  534091 (0 pps)                           [0]
+  Output packets:              119475689 (0 pps)                           [1] &lt;&lt;&lt; Customer B traffic dropped
+
+monitor interface et-2/0/0.0 
+Interface: et-2/0/0.0, Enabled, Link is Up
+
+&lt;- truncated output -&gt;
+
+Remote statistics:
+  Input bytes:                 132708516 (296 bps)                         [0]
+  Output bytes:              49685006066 (3921096 bps)                     [0]
+  Input packets:                  270844 (0 pps)                           [0]
+  Output packets:              101397976 (1000 pps)                        [0] &lt;&lt;&lt; Customer A still forwarded
+</code></pre></div></td></tr></table></div> <p>As discussed earlier, the default action when next-ip address becomes unreachable is to redirect traffic to the reject next-hop. Above, we issue a show route of the next-ip address and nothing was return as expected. Just now issue the show route forwarding-table:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span>
+<span class=normal>4</span>
+<span class=normal>5</span></pre></div></td><td class=code><div><pre><span></span><code>regress@rtme-mx-62&gt; show route forwarding-table destination 192.168.1.1 table VRF1    
+Routing table: VRF1.inet
+Internet:
+Destination        Type RtRef Next hop           Type Index    NhRef Netif
+default            perm     0                    rjct      695     1       &lt;&lt;&lt; rjct = reject next-hop
+</code></pre></div></td></tr></table></div> <p>The route points to reject next-hop in the FIB. As said, the next-hop will punted the packets to the RE for further processing (ICMP unreachable). As also mentioned those punted packet are rate-limited by the ASIC to 2kpps. We can verify this behavior, by checking the DDOS protection statistics for the "reject" protocol:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span>
+<span class=normal>4</span>
+<span class=normal>5</span>
+<span class=normal>6</span></pre></div></td><td class=code><div><pre><span></span><code>regress@rtme-mx-62&gt; show ddos-protection protocols reject statistics terse 
+Packet types: 1, Received traffic: 1, Currently violated: 1
+
+Protocol    Packet      Received        Dropped        Rate     Violation State
+group       type        (packets)       (packets)      (pps)    counts
+reject      aggregate   6396663340756   6395549305435  5000     9         viol 
+</code></pre></div></td></tr></table></div> <p>We saw our 5K of Customer B traffic before being rate-limited. Issue the "violation" check command to see the rate-limit value of 2K pps: </p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span>
+<span class=normal>4</span>
+<span class=normal>5</span>
+<span class=normal>6</span>
+<span class=normal>7</span></pre></div></td><td class=code><div><pre><span></span><code>regress@rtme-mx-62&gt; show ddos-protection protocols violations 
+Packet types: 255, Currently violated: 1
+
+Protocol    Packet      Bandwidth  Arrival   Peak      Policer bandwidth
+group       type        (pps)      rate(pps) rate(pps) violation detected at
+reject      aggregate   2000       5000      11682678  2025-04-10 08:22:39 PDT  &lt;&lt;&lt; Bandwidth = rate-limit = 2k pps
+          Detected on: FPC-5
+</code></pre></div></td></tr></table></div> <p>So it means our RE will received a maximum of 2K rejected packets and will generate 2K ICMP unreachable packets in reply. Just check our port connected to the IP Fabric and oh ! Suprise 2Kpps in output. These are our ICMP unreachable sent out back to the Customer B.</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span></pre></div></td><td class=code><div><pre><span></span><code>regress@rtme-mx-62&gt; monitor interface et-2/0/0.0   
+Interface: et-2/0/0.0, Enabled, Link is Up
+
+&lt;- truncated output -&gt;
+
+Remote statistics:
+  Input bytes:              117022326356 (23519664 bps)             [11197970]
+  Output bytes:                178738122 (895984 bps)                 [426496]
+  Input packets:               238821075 (6000 pps)                    [22853]
+  Output packets:                3191752 (2000 pps)                     [7616] &lt;&lt;&lt; 2K ICMP Unreachable targeting Cust. B
+</code></pre></div></td></tr></table></div> <p><strong>How we can avoid that?</strong> </p> <p>The easiest solution is to have in your FIB always a last resort route entry, that could be discard but why not a fallback path to route the next-ip address. In our case, if 192.168.1.1 deaseappers, we may want:</p> <ul> <li>to not reject/discard the traffic but move back to the PNI interface. For that we need to configure a static route pointing to PNI peer, with a higher preference as a backup path for 192.168.1.1. Let's do simply add this static route in our VRF and check just after the commit the statistics of our PNI interface to see if all our 6K pps (A+B traffic) are forwarded back:</li> </ul> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span></pre></div></td><td class=code><div><pre><span></span><code>edit private
+
+set routing-instances VRF1 routing-options static route 192.168.1.1/32 next-hop 172.16.8.1 preference 254
+
+commit comment &quot;ADD_BACKUP_NEXT_IP&quot; and-quit
+
+regress@rtme-mx-62&gt; monitor interface et-2/0/0.0   
+Interface: et-2/0/0.0, Enabled, Link is Up
+
+&lt;- truncated output -&gt;
+
+Remote statistics:
+  Input bytes:                 132708516 (0 bps)                           [0]
+  Output bytes:              50812435866 (23522568 bps)              [5629120]
+  Input packets:                  270844 (0 pps)                           [0]
+  Output packets:              103698854 (6000 pps)                    [11488] &lt;&lt;&lt; We backup B traffic to PNI
+</code></pre></div></td></tr></table></div> <ul> <li>or to silently discard the traffic. In this scenario we can create a static route with higher preference pointing to <strong>discard</strong> next-hop. In our case, I've just added a default discard route in the VRF. so, if 192.168.1.1/32 is not announce anymore, the lookup of the next-ip address will fall back to this default discard instead of matching the default reject. Let's remove the previous static route and add the new default one:</li> </ul> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span>
+<span class=normal>4</span>
+<span class=normal>5</span>
+<span class=normal>6</span></pre></div></td><td class=code><div><pre><span></span><code>edit private
+
+delete routing-instances VRF1 routing-options static route 192.168.1.1/32          
+set routing-instances VRF1 routing-options static route 0.0.0.0/0 discard 
+
+commit comment &quot;ADD_DEFAULT&quot; and-quit
+</code></pre></div></td></tr></table></div> <p>So, with this last configuration, our Customer B traffic should be now silently discared and we shouldn't observe DDOS protocol violation and ICMP unreachable traffic:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span></pre></div></td><td class=code><div><pre><span></span><code>regress@rtme-mx-62&gt; monitor interface et-2/0/0.0   
+Interface: et-2/0/0.0, Enabled, Link is Up
+Flags: SNMP-Traps 0x4000
+Encapsulation: ENET2
+Local statistics:                                                Current delta
+  Input bytes:                    216186                                   [0]
+  Output bytes:                   505399                                   [0]
+  Input packets:                    3530                                   [0]
+  Output packets:                   6274                                   [0]
+Remote statistics:
+  Input bytes:              119682374166 (23516136 bps)              [5628630]
+  Output bytes:                230359258 (0 bps)                           [0]
+  Input packets:               244249744 (5999 pps)                    [11487]
+  Output packets:                4113558 (0 pps)                           [0] &lt;&lt;&lt; No more ICMP Unreach. 
+
+
+regress@rtme-mx-62&gt; show ddos-protection protocols violations    
+Packet types: 255, Currently violated: 0   &lt;&lt;&lt; No more Violation 
+</code></pre></div></td></tr></table></div> <h3 id=pfe-analysis>PFE analysis<a class=headerlink href=#pfe-analysis title="Permanent link">&para;</a></h3> <p>Now, let’s re-announce the <strong>192.168.1.1/32</strong> prefix and examine how the FBF filter is applied on the <strong>PFE</strong>. Begin by running the following command to access the <strong>PFE CLI</strong>:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span></pre></div></td><td class=code><div><pre><span></span><code>regress@rtme-mx-62&gt; start shell pfe network fpc5
+</code></pre></div></td></tr></table></div> <p>Next, list all the filters available on the linecard:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span>
+<span class=normal>4</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show firewall 
+Name                                   Index          Token            Status
+FBF                                    1               2875            DMEM
+&lt;- truncated output -&gt;
+</code></pre></div></td></tr></table></div> <p>Now resolve the token index <code>2875</code> to display the filter’s program:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span>
+<span class=normal>19</span>
+<span class=normal>20</span>
+<span class=normal>21</span>
+<span class=normal>22</span>
+<span class=normal>23</span>
+<span class=normal>24</span>
+<span class=normal>25</span>
+<span class=normal>26</span>
+<span class=normal>27</span>
+<span class=normal>28</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show sandbox token 22571514 
+
+&lt;- truncated output -&gt;
+
+Filter properties: None
+Filter state = CONSISTENT
+term PBR_CUSTOMER_B
+term priority 0
+    source-address
+        172.222.0/24
+        false branch to match action in rule OTHER
+
+    then
+        accept
+        count CUSTOMERB
+         Policy Route:
+         Destination Prefix: 192.168.1.1
+         Routing instance: VRF1
+         Policy route action is valid: TRUE
+term OTHER
+term priority 0
+
+    then
+        accept
+        count OTHER
+Previous nodes count: 1      
+Next nodes count    : 0      
+Entries count       : 0               
+</code></pre></div></td></tr></table></div> <p>The above output shows the filter program optimized by the Firewall Filter compiler. To display the actual program pushed into hardware, use the following PFE commands:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span>
+<span class=normal>4</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show firewall instance 
+Name,Index              Instance Key                    InstanceToken           LinkCount
+FBF,1                   no-next-filter-0                5424                    1
+&lt;- truncated output -&gt;
+</code></pre></div></td></tr></table></div> <p>Then, run this second command using the Token ID <code>5424</code>, retrieved from the previous step:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span>
+<span class=normal>19</span>
+<span class=normal>20</span>
+<span class=normal>21</span>
+<span class=normal>22</span>
+<span class=normal>23</span>
+<span class=normal>24</span>
+<span class=normal>25</span>
+<span class=normal>26</span>
+<span class=normal>27</span>
+<span class=normal>28</span>
+<span class=normal>29</span>
+<span class=normal>30</span>
+<span class=normal>31</span>
+<span class=normal>32</span>
+<span class=normal>33</span>
+<span class=normal>34</span>
+<span class=normal>35</span>
+<span class=normal>36</span>
+<span class=normal>37</span>
+<span class=normal>38</span>
+<span class=normal>39</span>
+<span class=normal>40</span>
+<span class=normal>41</span>
+<span class=normal>42</span>
+<span class=normal>43</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show sandbox token 5424 
+
+&lt;- truncated output -&gt;
+
+JNH_FW_START:
+        opcode = 0x0000000c
+        anonymous_union_0 = 0x00008605
+        filter_id = 0x00000000
+        cntr_base = 0x00000001
+        flt_base = 0x00000000
+        base_ptr = 0x000255af
+
+Filter is not interface specific 1
+
+Current context : 0.
+
+Pfe Inst:0 Hw Instance 1, type:1 op:2 ref 0
+  Counter Base:- 0x5400f8
+  Policer Base:- 0
+  Number of counters : 2 (including PSAs)
+
+term PBR_CUSTOMER_B (pfe-inst 0)
+     Start Addr   :- 0x8605
+     Stop Addr    :- 0x8607
+     Stop NH      :- 0x6808255ab012ad58
+         Decoding :- FW_STOP: pdesc:0x104ab56 desc:0x4ab56
+
+     Action Addr  :- 0x4ab56
+     Action NH    :- 0x812aed800010000
+
+match type: prefix
+  loc: 0x8605 nh: 0x7e30004002800000
+  FW_4BMATCH: fwop:0 desc:0x8005 koffset:396 boffset:0 mask:0x149c00e8 data:0x7fb7
+
+Inst: 0 Action-Type: 134
+        JNH      :- 0x2bfffffd00000300:   &lt;&lt;&lt; count CUSTOMERB;
+                 CounterNH: Relative Base = 1, Offset = 0x0, nextNH = 0xffffff
+
+Inst: 0 Action-Type: 0
+        JNH      :- 0x201282240000000c:   &lt;&lt;&lt; next-ip 192.168.1.1/32 routing-instance VRF1;
+                 UcodeNH: Indirect Decode: Indirect, Next = 0x4a089, pnh_id = 0, ,
+
+&lt;- truncated output -&gt;
+</code></pre></div></td></tr></table></div> <p>Pick the JNH dword corresponding to the next-ip action <code>0x201282240000000c</code> (line 40), and decode it:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh decode word 0x201282240000000c inst 2    
+UcodeNH: Indirect Decode: Indirect, Next = 0x4a089, pnh_id = 0,
+</code></pre></div></td></tr></table></div> <p><strong>UcodeNH</strong> will run a micro-code sequence. Here, it is an indirection to a virtual address found in the <strong>Next</strong> field. To read the data at <code>0x4a089</code>, run:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh vread vaddr 0x4a089 NH inst 2            
+Addr:Nexthop 0x4a089 Paddr:0x104a089, Data = 0x0812659400040000
+</code></pre></div></td></tr></table></div> <p>This returns two key values:</p> <ul> <li><strong>Paddr</strong> (physical address): <code>0x104a089</code></li> <li><strong>Data</strong> read: <code>0x0812659400040000</code></li> </ul> <blockquote> <p>Note: To read a physical address, use <code>show pread paddr xxx</code>.</p> </blockquote> <p>Since the value is a JNH word, decode it again. This time it reveals a <strong>CallNH</strong>, a list of ordered next-hops (when <strong>mode=0</strong>):</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span>
+<span class=normal>4</span>
+<span class=normal>5</span>
+<span class=normal>6</span>
+<span class=normal>7</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh decode word 0x0812659400040000 inst 2 
+CallNH:desc_ptr:0x49965, mode=0, count=0x5
+  0x049960  0 : 0x168c000000000000
+  0x049961  1 : 0x40101ffffff81510
+  0x049962  2 : 0x40181fffffe02030
+  0x049963  3 : 0x1810318200200008
+  0x049964  4 : 0x23fffffc00000001 &lt;&lt;&lt; this one will be skipped - related to fabric encap.
+</code></pre></div></td></tr></table></div> <p>Now decode each action (excluding the fifth one, which is outside the scope of this article):</p> <ul> <li>The first is a <code>ModifyNH</code>, which modifies local memory — in this case, resetting the encapsulation length:</li> </ul> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh decode word 0x168c000000000000 inst 2    
+ModifyNH: Subcode=Misc(26)
+(Reset encap len)
+</code></pre></div></td></tr></table></div> <ul> <li>The second and third entries are <strong>BitOpNH</strong> actions, performing operations on specific data:</li> </ul> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span>
+<span class=normal>4</span>
+<span class=normal>5</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh decode word 0x40101ffffff81510 inst 2    
+BitOpNH: opcode=0x00000008, data32=0, desc_ptr=0xffffff, key=0x4/0 PPPoE Session ID, op=0, data=49320, nbits=16
+
+root@rtme-mx-62-fpc5:pfe&gt; show jnh decode word 0x40181fffffe02030 inst 2    
+BitOpNH: opcode=0x00000008, data32=0, desc_ptr=0xffffff, key=0x6/0 Unknown, op=0, data=257, nbits=16
+</code></pre></div></td></tr></table></div> <p>These actions extract the next-ip address from local memory in two steps:</p> <ul> <li>First, we fetch <code>49320</code> (0xC0A8 = 192.168)</li> <li>Then, we fetch <code>257</code> (0x0101 = 1.1)</li> </ul> <p>Combined, we recover the next-ip address from our FBF filter: <strong>192.168.1.1</strong>. This is a "key" that will be used for further processing (route lookup).</p> <ul> <li>The fourth NH in the list <code>0x1810318200200008</code> is a <strong>KTREE</strong> structure used for route lookup:</li> </ul> <blockquote> <p>A <strong>KTREE</strong> is Juniper’s implementation of a binary structure known as a <strong>Patricia Tree</strong>.</p> </blockquote> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh decode word 0x1810318200200008 inst 2    
+KtreeNH: skip=8, sw_token=0, arOffset=0, mode=1, descPtr=0xc60800, key=0x4/0 LookupKey
+</code></pre></div></td></tr></table></div> <p>To dump the full KTREE, use:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span>
+<span class=normal>19</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh decode word 0x1810318200200008 inst 2 ktree yes dump yes 
+Route                                 Depth   JNH
+------------------------------------  ------  ------------------
+Default                                    0  0x0812ad6000000000
+00000000/32                                1  0x0812a08400000000
+080808/24                                  1  0x08129d0400000000
+acde00/24                                  2  0x08129df400000000
+ac6f00/24                                  2  0x08129df400000000
+ac100800/31                                3  0x000000000004ab3c
+ac100801/32                                4  0x0812ade000000000
+ac100800/32                                4  0x0812ac9800010000
+ac100004/31                                3  0x000000000004abc0
+ac100005/32                                4  0x08129d4800000000
+ac100004/32                                4  0x0812aec800010000
+c0a80101/32                                1  0x08129a1800000000 &lt;&lt;&lt; 192.168.1.1/32
+e0000001/32                                1  0x0812a0c400000000
+ffffffff/32                                1  0x0812a0e400000000
+
+Routes found: 14, Bytes used: 6664
+</code></pre></div></td></tr></table></div> <p>This KTREE acts as the FIB for our <strong>VRF1</strong> instance. For instance, traffic hitting the <strong>192.168.1.1/32</strong> prefix is redirected to the action identified by the JNH word <code>0x08129a1800000000</code>, pointing to a <strong>CallNH</strong>:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh decode word 0x08129a1800000000 inst 2    
+CallNH:desc_ptr:0x4a686, mode=0, count=0x1
+  0x04a685  0 : 0x20129af00000000c
+</code></pre></div></td></tr></table></div> <p>This value (<code>0x20129af00000000c</code>) is another <strong>UcodeNH</strong> indirection:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh decode word 0x20129af00000000c inst 2    
+UcodeNH: Indirect Decode: Indirect, Next = 0x4a6bc, pnh_id = 0, ,
+</code></pre></div></td></tr></table></div> <p>To follow the indirection, read the next-hop at <code>0x4a6bc</code>:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh vread vaddr 0x4a6bc NH inst 2            
+Addr:Nexthop 0x4a6bc Paddr:0x104a6bc, Data = 0x08129ad400000000
+</code></pre></div></td></tr></table></div> <p>Once again, decode the JNH word retrieved from the virtual memory address — it points to another <strong>CallNH</strong> list:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh decode word 0x08129ad400000000 inst 2    
+CallNH:desc_ptr:0x4a6b5, mode=0, count=0x1
+  0x04a6b4  0 : 0x11c0000000026c14
+</code></pre></div></td></tr></table></div> <p>Decode the final NH word <code>0x11c0000000026c14</code>:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh decode word 0x11c0000000026c14 inst 2    
+ModifyNH: Subcode=SetNH-Token(7),Desc=0x0,Data=0x26c14,NextNH=0
+ (pfeDest:20, TokenIdMode:0/  , VC memberId:0, isReass:0, token:0x26c/620)
+</code></pre></div></td></tr></table></div> <p>We’ve reached the final forwarding action — setting the forwarding NH index via the <strong>NH Token</strong>. Here, the token <code>0x26c</code> corresponds to the NH ID from our route lookup.</p> <p>To get more info on this next-hop:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show nh db index 0x26c                                   
+Index          Type        Func-Type    Proto        Nh-Flags        Ifl-Name        Ifl-Index       Nh-Token        Nh-Prefix
+620            Unicast     -            ipv4_tag     0x41            et-5/0/0.0      356             5519           ac100101/32                                   
+</code></pre></div></td></tr></table></div> <p>Perfect — this confirms that the traffic is forwarded via the correct path: our core-facing interface <code>et-5/0/0.0</code> and doesn't follow anymore the "best path".</p> <p>To go further (e.g., check Layer 2 headers or MPLS encapsulation), use:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span>
+<span class=normal>19</span>
+<span class=normal>20</span>
+<span class=normal>21</span>
+<span class=normal>22</span>
+<span class=normal>23</span>
+<span class=normal>24</span>
+<span class=normal>25</span>
+<span class=normal>26</span>
+<span class=normal>27</span>
+<span class=normal>28</span>
+<span class=normal>29</span>
+<span class=normal>30</span>
+<span class=normal>31</span>
+<span class=normal>32</span>
+<span class=normal>33</span>
+<span class=normal>34</span>
+<span class=normal>35</span>
+<span class=normal>36</span>
+<span class=normal>37</span>
+<span class=normal>38</span>
+<span class=normal>39</span>
+<span class=normal>40</span>
+<span class=normal>41</span>
+<span class=normal>42</span>
+<span class=normal>43</span>
+<span class=normal>44</span>
+<span class=normal>45</span>
+<span class=normal>46</span>
+<span class=normal>47</span>
+<span class=normal>48</span>
+<span class=normal>49</span>
+<span class=normal>50</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show nh detail index 0x26c     
+Nexthop Info:
+
+NH Index                      : 620
+NH Type                       : Unicast
+NH Proto                      : ipv4_tag
+NH Flags                      : 0x41
+IF Name                       : et-5/0/0.0
+Prefix                        : ac100101/32
+NH Token Id                   : 5519
+NH Route Table Id             : 0
+Sgid                          : 0
+
+OIF Index                     : 356
+Underlying IFL                : .local..0 (0)
+Session Id                    : 788
+Num Tags                      : 2
+Label                         : 0x4e87eff0 (20103)lbFlags: 0
+Label                         : 0x10fff000 (16)lbFlags: 0
+MTU                           : 0
+L2 Length                     : 12
+L2 Data                       : 00:00:01:64:80:00:a8:d0:e5:ef:6a:87
+Filter Index                  : 0
+
+Platform Info
+-------------
+  FabricToken: 5527
+  EgressToken: 5526
+  IngressFeatures:
+
+Container token: 5519
+#5 SetNhToken tokens:
+ Mask : 0x0
+ [  SetNhToken:5518  ]
+
+  EgressFeatures:
+
+Container token: 5526
+#2 PushLabels tokens:
+ Mask : 0x0
+ [  PushLabels:5522  Token-1:5520  Token-2:5521  ]
+#4 StatsCounter tokens:
+ Mask : 0x1
+ [  StatsCounter:5523  ]
+#11 UcastEncap tokens:
+ Mask : 0x0
+ [  UcastEncap:5524  ]
+#12 SetOIF tokens:
+ Mask : 0x0
+ [  SetOIF:5525  ]
+</code></pre></div></td></tr></table></div> <p>The figure below summarizes our packet walkthrough and highlights the main FBF steps:</p> <p><img alt="FBF next-ip at PFE level" src=images/PFE-FBF-1.png></p> <p><strong>And that wraps up part one.</strong> Take a break — in part two, we’ll dive into configuring FBF thanks to the <strong>rib-group</strong> feature.</p> <h2 id=case-2-fbf-using-forwarding-instance>Case 2 - FBF Using forwarding instance<a class=headerlink href=#case-2-fbf-using-forwarding-instance title="Permanent link">&para;</a></h2> <p>The second approach to achieving Filter-Based Forwarding (FBF) leverages the <strong>forwarding-type routing instance</strong>. In this method, the FBF filter term action redirects traffic to a specific routing instance of type <code>forwarding</code>.</p> <p>This solution is considered the legacy approach and is widely supported on MX platforms. Compared to Case 1, it requires a deeper understanding of the <strong><code>rib-group</code></strong> concept. The following section will elucidate the necessary concepts to effectively implement FBF using this method.</p> <h3 id=rib-group-concept>rib-group Concept<a class=headerlink href=#rib-group-concept title="Permanent link">&para;</a></h3> <p>A <strong>RIB group</strong> on Juniper devices enables routes learned in one routing table (the <em>source</em> or <em>initial</em> RIB) to be simultaneously installed into multiple routing tables (the <em>destination</em> RIBs). This feature is commonly utilized to share routes between routing instances (VRFs) or between the global routing table and a VRF. Policies can control which routes are imported, making RIB groups a flexible method for internal route redistribution without relying on BGP or other protocols.</p> <p>Without a RIB group, each protocol — depending on the address family — feeds routes into a default routing table. In the context of RIB groups, this default table is referred to as the <em>source</em> or <em>initial</em> RIB. Similarly, protocols fetch routes (for a given family) from this default table when exporting routes.</p> <p>The figure below illustrates the default routing behavior:</p> <p><img alt="Default routing table management" src=images/diag4.png></p> <p>As shown above, for BGP with the <code>inet</code> family (IPv4 unicast), the default routing table in the global context is <strong><code>inet.0</code></strong> — both for importing and exporting routes. Similarly, interface IPv4 addresses (direct routes) in the global context also reside in <strong><code>inet.0</code></strong>.</p> <p>To leak routes from one table to another, the <strong>RIB group</strong> feature is employed, configured under <strong><code>routing-options</code></strong>. A RIB group is defined with the following parameters:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span>
+<span class=normal>4</span>
+<span class=normal>5</span>
+<span class=normal>6</span>
+<span class=normal>7</span>
+<span class=normal>8</span></pre></div></td><td class=code><div><pre><span></span><code>[edit routing-options]
+rib-groups {
+    &lt;rib-group-name&gt; {
+        import-rib [ &lt;source_table&gt; &lt;destination_table_1&gt; &lt;destination_table_2&gt; ... ];
+        import-policy &lt;rib-group-import-policy&gt;;
+        export-policy &lt;rib-group-export-policy&gt;;
+    }
+}
+</code></pre></div></td></tr></table></div> <blockquote> <p><strong>Note:</strong> <code>import-policy</code> and <code>export-policy</code> are optional, but at least one destination table must be specified in <code>import-rib</code>.</p> </blockquote> <p>The <strong><code>import-rib</code></strong> statement is crucial. The order of tables matters: the first table is the <em>source</em> (or <em>initial</em>, <em>standard</em>, <em>contributing</em>) table. This is the default RIB associated with a given protocol/family combination. With a RIB group, routes are taken from this <em>source</em> table and replicated into one or more <em>destination</em> tables.</p> <p>The RIB group establishes a link between the source RIB and the destination RIBs. The <strong><code>import-policy</code></strong> provides fine-grained control, allowing only specific routes or protocols to be leaked to the destination tables. Similarly, <strong><code>export-policy</code></strong> controls which routes from the destination tables are eligible for export by routing protocols.</p> <p>The next figure illustrates the concept:</p> <p><img alt="Routes leaking thanks to rib-group feature" src=images/diag5.png></p> <p>This example demonstrates how BGP unicast routes from the global routing context are leaked into a new routing table (or instance) called <strong>FBF</strong>. While these routes remain in their default (source) table — <strong><code>inet.0</code></strong> — they are also copied into an additional table, in this case, the destination <strong><code>FBF.inet.0</code></strong>, using a RIB group.</p> <p>In the context of Filter-Based Forwarding (FBF), this allows you to constrain routing decisions to a specific set of routes — not by using the standard FIB, but by relying on a custom FIB built from the custom destination RIB. This destination RIB can be selectively populated with only the routes you want to use for FBF-based traffic steering.</p> <p>Let's illustrate this second FBF method with an example.</p> <h3 id=example-2-topology>Example 2 - Topology<a class=headerlink href=#example-2-topology title="Permanent link">&para;</a></h3> <p>The Device Under Test (<strong>DUT</strong>) is an <strong>MX480</strong> equipped with an <strong>MPC10E</strong> line card.</p> <p>This simplified setup represents a typical <strong>DCI</strong> router connected to an <strong>IP Fabric</strong>, providing access to remote resources via two distinct paths:</p> <ul> <li>A <strong>quality</strong> path through an <strong>MPLS/SR</strong> core network, and</li> <li>A <strong>best-effort</strong> path via a <strong>direct peering or transit (PNI)</strong> connection.</li> </ul> <p>In this scenario, remote resources are reached via the direct PNI link connected in the Global Routing Table (GRT) and sent from the peer to our DUT via an eBGP session. The DUT also receives the same remote resources from a remote <strong>ASBR</strong> through an iBGP session. The remote ASBR sets the next-hop address of these routes with its Segment Routing node-SID (advertised in the ISIS SR domain). This allows for a BGP Free-core by tunneling traffic in a transport SR tunnel.</p> <p><img alt="Network topology" src=images/diag3.png></p> <p>For demonstration purposes, the remote resource is simulated using the public prefix <strong>8.8.8.0/24</strong>. This prefix is preferred by default via the direct PNI, with a backup path available through the MPLS/SR core (shortcut SR):</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span></pre></div></td><td class=code><div><pre><span></span><code>regress@rtme-mx-62&gt; show route 8.8.8.0/24 
+
+inet.0: 43 destinations, 44 routes (43 active, 0 holddown, 0 hidden)
++ = Active Route, - = Last Active, * = Both
+
+8.8.8.0/24         *[BGP/170] 6d 17:31:10, localpref 10000
+                      AS path: 1234 6000 I, validation-state: unverified
+                    &gt;  to 172.16.8.1 via et-2/0/0.0                       &lt;&lt;&lt; PNI
+                    [BGP/170] 00:00:11, localpref 50, from 193.252.102.2
+                      AS path: I, validation-state: unverified
+                    &gt;  to 172.16.1.1 via et-5/0/0.0, Push 20002           &lt;&lt;&lt; SR Tunnel 
+</code></pre></div></td></tr></table></div> <p><strong>Initial Configuration</strong></p> <p>Below is the initial configuration for the DUT, kept simple for clarity:</p> <ul> <li>The DUT receives customer prefixes via <strong>eBGP</strong> from the peer group <strong>FABRIC</strong>.</li> <li>The DUT receives public prefixes from the PNI peer—this is the primary/best path. A higher local-preference is set using the <code>PREF</code> import policy.</li> <li>It also receives public prefixes from the peer ASBR via <strong>iBGP</strong>—this is a backup path—remotely reachable through an MPLS SR Tunnel.</li> </ul> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span>
+<span class=normal>19</span>
+<span class=normal>20</span>
+<span class=normal>21</span>
+<span class=normal>22</span>
+<span class=normal>23</span>
+<span class=normal>24</span>
+<span class=normal>25</span>
+<span class=normal>26</span>
+<span class=normal>27</span>
+<span class=normal>28</span>
+<span class=normal>29</span></pre></div></td><td class=code><div><pre><span></span><code>regress@rtme-mx-62&gt; show configuration 
+protocols {
+    bgp {
+        group FABRIC {
+            type external;
+            local-address 172.16.0.4;
+            peer-as 5000;
+            neighbor 172.16.0.5;
+        }
+        group PEER {
+            type external;
+            local-address 172.16.8.0;
+            import PREF;
+            family inet {
+                unicast;
+            }
+            peer-as 1234;
+            neighbor 172.16.8.1;
+        }
+        group ASBR {
+            type internal;
+            local-address 193.252.102.101;
+            family inet {
+                unicast;
+            }
+            neighbor 193.252.102.2;
+        }
+    }
+}
+</code></pre></div></td></tr></table></div> <p><strong>Configuration of FBF</strong></p> <p>The next steps involve creating a new routing instance (type <code>forwarding</code>) and leaking both the interface routes (i.e., <code>direct</code> routes for resolving the Layer 2 header) and the remote resources (in our case, 8.8.8.0/24), but only those announced by the core network - not those learned via the PNI.</p> <p>First, create the FBF routing instance:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span></pre></div></td><td class=code><div><pre><span></span><code>edit 
+load merge terminal relative
+
+routing-instances {
+    FBF {
+        instance-type forwarding;
+    }
+}
+
+commit comment &quot;add_fbf_ri&quot;
+</code></pre></div></td></tr></table></div> <p>Next, create a new <code>rib-group</code> called <strong>RG_FBF</strong>, establishing a relationship between the <code>inet.0</code> table and <code>FBF.inet.0</code>. In other words, a relation between the default IPv4 table and the IPv4 table of our newly created <strong>FBF</strong> routing instance.</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span></pre></div></td><td class=code><div><pre><span></span><code>edit 
+load merge terminal relative
+
+routing-options {
+    rib-groups {
+        RG_FBF {
+            import-rib [ inet.0 FBF.inet.0 ];
+        }
+    }
+}
+
+commit comment &quot;add_rib-group&quot;
+</code></pre></div></td></tr></table></div> <p>Remember, the order inside the <code>import-rib</code> option is important. The first table is considered the source table, and the second one is the destination table. At this point, nothing is leaked between these two tables; this configuration merely establishes the relationship.</p> <p>The first routes to leak are the direct interfaces attached to <code>inet.0</code>. This can be achieved with the following configuration under <code>routing-options</code>:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span></pre></div></td><td class=code><div><pre><span></span><code>edit 
+load merge terminal relative
+
+routing-options {
+    interface-routes {
+        rib-group inet RG_FBF;
+    }
+}
+
+commit comment &quot;import-direct&quot;
+</code></pre></div></td></tr></table></div> <p>Once committed, you should see <code>direct</code> and <code>local</code> routes in the <code>FBF.inet.0</code> table. Verify with:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span>
+<span class=normal>19</span></pre></div></td><td class=code><div><pre><span></span><code>regress@rtme-mx-62&gt; show route table FBF.inet.0 
+
+FBF.inet.0: 10 destinations, 10 routes (10 active, 0 holddown, 0 hidden)
++ = Active Route, - = Last Active, * = Both
+
+172.16.0.4/31      *[Direct/0] 6d 20:12:58
+                    &gt;  via et-5/2/0.0         &lt;&lt;&lt; Fabric
+172.16.0.4/32      *[Local/0] 00:00:59
+                       Local via et-5/2/0.0
+172.16.1.0/31      *[Direct/0] 6d 20:12:58
+                    &gt;  via et-5/0/0.0         &lt;&lt;&lt; Core
+172.16.1.0/32      *[Local/0] 00:00:59
+                       Local via et-5/0/0.0
+172.16.8.0/31      *[Direct/0] 6d 20:12:58
+                    &gt;  via et-2/0/0.0         &lt;&lt;&lt; PNI
+172.16.8.0/32      *[Local/0] 00:00:59
+                       Local via et-2/0/0.0
+193.252.102.101/32 *[Direct/0] 6d 20:12:58
+                    &gt;  via lo0.0
+</code></pre></div></td></tr></table></div> <p>Everything looks good so far. The next step is to leak some BGP routes into the <code>FBF</code> routing table. But which ones?</p> <p>Our goal is to redirect traffic entering this forwarding instance along a specific path — the one advertised by our remote ASBR. This route is available in the default <code>inet.0</code> table as a backup path. To achieve this, we'll configure BGP to use the <code>RG_FBF</code> rib-group. This rib-group allows routes normally imported into <code>inet.0</code> to be simultaneously leaked into <code>FBF.inet.0</code>.</p> <p>Let’s apply this on the <code>ASBR</code> peer-group:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span></pre></div></td><td class=code><div><pre><span></span><code>edit 
+edit protocols
+load merge terminal relative
+
+bgp {
+    group ASBR {
+        type internal;
+        local-address 193.252.102.101;  
+        family inet {
+            unicast {
+                rib-group RG_FBF;    &lt;&lt;&lt; This tells BGP to use the rib-group and specifies where to leak learned routes
+            }
+        }
+        neighbor 193.252.102.2;
+    }
+}
+
+commit comment &quot;import_bgp&quot;
+</code></pre></div></td></tr></table></div> <p>With this configuration, all routes received from this peer-group will be leaked into <code>FBF.inet.0</code>. However, for demonstration purposes, we’ll restrict the leaking to a specific BGP prefix: <strong>8.8.8.0/24</strong>.</p> <p>To do that, we’ll use the <code>import-policy</code> feature of the rib-group. First, we define a policy to authorize leaking from <code>inet.0</code> to <code>FBF.inet.0</code>, but only for:</p> <ul> <li>direct routes, and</li> <li>the BGP prefix 8.8.8.0/24</li> </ul> <p>Here’s the policy definition, followed by its application to the <code>RG_FBF</code> rib-group:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span>
+<span class=normal>19</span>
+<span class=normal>20</span>
+<span class=normal>21</span>
+<span class=normal>22</span>
+<span class=normal>23</span>
+<span class=normal>24</span>
+<span class=normal>25</span>
+<span class=normal>26</span>
+<span class=normal>27</span>
+<span class=normal>28</span>
+<span class=normal>29</span>
+<span class=normal>30</span>
+<span class=normal>31</span>
+<span class=normal>32</span></pre></div></td><td class=code><div><pre><span></span><code>edit 
+load merge terminal relative
+
+policy-options {
+    policy-statement FBF_POLICY {
+        term LEAK_DIRECT {
+            from protocol direct;
+            then accept;
+        }
+        term LEAK_BGP {
+            from {
+                protocol bgp;
+                route-filter 8.8.8.0/24 orlonger;
+            }
+            then accept;
+        }
+        term REJECT_OTHER {
+            then reject;
+        }
+    }
+}
+
+routing-options {
+    rib-groups {
+        RG_FBF {
+            import-rib [ inet.0 FBF.inet.0 ];
+            import-policy FBF_POLICY;         &lt;&lt;&lt; controls which routes get leaked
+        }
+    }
+}
+
+commit comment &quot;add_leaking_policy&quot;
+</code></pre></div></td></tr></table></div> <p>After committing, you can verify the result with:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span>
+<span class=normal>4</span>
+<span class=normal>5</span>
+<span class=normal>6</span>
+<span class=normal>7</span>
+<span class=normal>8</span></pre></div></td><td class=code><div><pre><span></span><code>regress@rtme-mx-62&gt; show route table FBF.inet.0 protocol bgp   
+
+FBF.inet.0: 7 destinations, 7 routes (7 active, 0 holddown, 0 hidden)
++ = Active Route, - = Last Active, * = Both
+
+8.8.8.0/24         *[BGP/170] 01:16:31, localpref 50, from 193.252.102.2
+                      AS path: I, validation-state: unverified
+                    &gt;  to 172.16.1.1 via et-5/0/0.0, Push 20002
+</code></pre></div></td></tr></table></div> <p>Perfect — only the 8.8.8.0/24 prefix received from the internal ASBR is installed. The primary route via the PNI isn't present in this instance and remains solely in the <code>inet.0</code> table.</p> <p>Now, to actually redirect the traffic, we’ll use a simple firewall filter. It will match traffic sourced from Customer B and redirect it to the <code>FBF</code> routing instance. This filter is applied to the physical interface connected to the IP Fabric:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span>
+<span class=normal>19</span>
+<span class=normal>20</span>
+<span class=normal>21</span>
+<span class=normal>22</span>
+<span class=normal>23</span>
+<span class=normal>24</span>
+<span class=normal>25</span>
+<span class=normal>26</span>
+<span class=normal>27</span>
+<span class=normal>28</span>
+<span class=normal>29</span>
+<span class=normal>30</span>
+<span class=normal>31</span>
+<span class=normal>32</span>
+<span class=normal>33</span>
+<span class=normal>34</span>
+<span class=normal>35</span>
+<span class=normal>36</span>
+<span class=normal>37</span>
+<span class=normal>38</span>
+<span class=normal>39</span>
+<span class=normal>40</span>
+<span class=normal>41</span>
+<span class=normal>42</span></pre></div></td><td class=code><div><pre><span></span><code>edit 
+load merge terminal relative
+
+firewall {
+    family inet {                       
+        filter FBF_FWD {
+            term CUSTOMER_B {
+                from {
+                    source-address {
+                        172.222.0.0/24;
+                    }
+                }
+                then {
+                    count FBF;
+                    routing-instance FBF;
+                }
+            }
+            term other {
+                then {
+                    count OTHER;
+                    accept;
+                }
+            }
+        }
+    }
+}
+
+interfaces {
+    et-5/2/0 {
+        mtu 9200;
+        unit 0 {
+            family inet {
+                filter {
+                    input FBF_FWD;
+                }
+                address 172.16.0.4/31;
+            }
+        }
+    }
+}
+
+commit comment &quot;apply_fbf&quot;
+</code></pre></div></td></tr></table></div> <p>At this point, traffic should be redirected as expected:</p> <p><img alt="FBF in action" src=images/diag6.png></p> <p>To help distinguish the flows, we've configured traffic rates as follows:</p> <ul> <li><strong>Customer A</strong>: 1000 packets per second (pps)</li> <li><strong>Customer B</strong>: 5000 packets per second (pps)</li> </ul> <p>Let’s monitor the PNI interface. As expected, only Customer A traffic goes through it (1000pps):</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span></pre></div></td><td class=code><div><pre><span></span><code>regress@rtme-mx-62&gt; monitor interface et-2/0/0.0   
+Interface: et-2/0/0.0, Enabled, Link is Up
+
+&lt;- truncated output -&gt;
+
+Remote statistics:
+  Input bytes:                 132708516 (0 bps)                           [0]
+  Output bytes:              49128737556 (3921056 bps)                     [0]
+  Input packets:                  270844 (0 pps)                           [0]
+  Output packets:              100262735 (1000 pps)                        [0] &lt;&lt;&lt; Only Customer A traffic
+</code></pre></div></td></tr></table></div> <p>Now let’s check the core-facing interface — we can see Customer B’s traffic being redirected via FBF to the ASBR:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span></pre></div></td><td class=code><div><pre><span></span><code>regress@rtme-mx-62&gt; monitor interface et-5/0/0.0  
+Interface: et-5/0/0.0, Enabled, Link is Up
+
+&lt;- truncated output -&gt;
+
+Remote statistics:
+  Input bytes:                 253750639 (584 bps)                         [0]
+  Output bytes:              57241664165 (19600072 bps)                    [0]
+  Input packets:                  533880 (1 pps)                           [0]
+  Output packets:              116839924 (5000 pps)                        [0] &lt;&lt;&lt; the tunneled Customer B traffic 
+</code></pre></div></td></tr></table></div> <p>Now, what if the iBGP session to the ASBR drops, or the 8.8.8.0/24 prefix is no longer announced?</p> <p>In that case, the route will vanish from <code>FBF.inet.0</code>, and the default reject route will take over:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span>
+<span class=normal>4</span>
+<span class=normal>5</span></pre></div></td><td class=code><div><pre><span></span><code>regress@rtme-mx-62&gt; show route forwarding-table destination 0.0.0.0/0 table FBF 
+Routing table: FBF.inet
+Internet:
+Destination        Type RtRef Next hop           Type Index    NhRef Netif
+default            perm     0                    rjct      520     1       &lt;&lt;&lt; default reject route
+</code></pre></div></td></tr></table></div> <p>Just like in <strong>Case 1</strong>, traffic to 8.8.8.0/24 will be rejected and punted to the routing engine (RE), which will respond with ICMP Unreachable messages (after being HW-policed to 2k pps).</p> <p>To silently drop such packets instead of punting them, configure a static discard route as the default inside the FBF instance. But what if you want a fallback to the default routing table instead?</p> <p>That’s simple. If fallback forwarding is needed, just configure a default route inside the FBF instance pointing to the <code>inet.0</code> table. If 8.8.8.0/24 disappears, traffic is then forwarded via the primary PNI path through <code>inet.0</code>.</p> <p>Here’s the configuration:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span></pre></div></td><td class=code><div><pre><span></span><code>edit 
+load merge terminal relative
+
+routing-instances {
+    FBF {
+        instance-type forwarding;
+        routing-options {
+            static {
+                route 0.0.0.0/0 next-table inet.0; &lt;&lt;&lt; default fallback route
+            }
+        }
+    }
+}
+
+commit comment &quot;add_fallback_route&quot;
+</code></pre></div></td></tr></table></div> <h3 id=pfe-analysis_1>PFE analysis<a class=headerlink href=#pfe-analysis_1 title="Permanent link">&para;</a></h3> <p>Assuming the FBF configuration is active, let’s break down how the firewall filter behaves at the PFE level. Start by listing the filter instances:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span>
+<span class=normal>4</span>
+<span class=normal>5</span>
+<span class=normal>6</span></pre></div></td><td class=code><div><pre><span></span><code>regress@rtme-mx-62&gt; start shell pfe network fpc5 
+
+root@rtme-mx-62-fpc5:pfe&gt; show firewall instance     
+Name,Index              Instance Key                    InstanceToken           LinkCount
+FBF_FWD,2                       no-next-filter-0                4777            1
+&lt;- truncated output -&gt;
+</code></pre></div></td></tr></table></div> <p>Next, pick up the <strong>InstanceToken</strong> and resolve it using the following command:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span>
+<span class=normal>19</span>
+<span class=normal>20</span>
+<span class=normal>21</span>
+<span class=normal>22</span>
+<span class=normal>23</span>
+<span class=normal>24</span>
+<span class=normal>25</span>
+<span class=normal>26</span>
+<span class=normal>27</span>
+<span class=normal>28</span>
+<span class=normal>29</span>
+<span class=normal>30</span>
+<span class=normal>31</span>
+<span class=normal>32</span>
+<span class=normal>33</span>
+<span class=normal>34</span>
+<span class=normal>35</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show sandbox token 4777        
+
+&lt;- truncated output -&gt;
+
+Pfe Inst:0 Hw Instance 1, type:1 op:2 ref 0
+  Counter Base:- 0x5400e8
+  Policer Base:- 0
+  Number of counters : 2 (including PSAs)
+
+term CUSTOMER_B (pfe-inst 0)
+     Start Addr   :- 0x85fc
+     Stop Addr    :- 0x85fe
+     Stop NH      :- 0x680825491812a48c
+         Decoding :- FW_STOP: pdesc:0x104a923 desc:0x4a923
+
+     Action Addr  :- 0x4a923
+     Action NH    :- 0x812a81c00020000
+
+match type: prefix
+  loc: 0x85fc nh: 0x7e3000401e000000
+  FW_4BMATCH: fwop:0 desc:0x803c koffset:396 boffset:0 mask:0x149c00e8 data:0x7fb7
+
+Inst: 0 Action-Type: 134
+        JNH      :- 0x2bfffffd00000300:
+                 CounterNH: Relative Base = 1, Offset = 0x0, nextNH = 0xffffff
+
+Inst: 0 Action-Type: 0
+        JNH      :- 0x23fffffc0000100c:
+                 UcodeNH: Indirect Decode: Indirect, Next = 0xffffff, pnh_id = 0, ,
+
+Inst: 0 Action-Type: 0
+        JNH      :- 0x20129a4c0000000c:
+                 UcodeNH: Indirect Decode: Indirect, Next = 0x4a693, pnh_id = 0, ,
+
+&lt;- truncated output -&gt;
+</code></pre></div></td></tr></table></div> <p>Focus on the <strong>Action NH</strong> (line 17) and decode the <strong>JNH</strong> word. As shown, this represents a chain of Next-hops:</p> <blockquote> <p>The parameter <code>inst</code> below refers to the PFE id. </p> </blockquote> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span>
+<span class=normal>4</span>
+<span class=normal>5</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh decode word 0x812a81c00020000 inst 2     
+CallNH:desc_ptr:0x4aa07, mode=0, count=0x3
+  0x04aa04  0 : 0x2bfffffd00000300  &lt;&lt;&lt; Action Counter
+  0x04aa05  1 : 0x23fffffc0000100c  &lt;&lt;&lt; dummy action for clearing some internal states
+  0x04aa06  2 : 0x20129a4c0000000c  &lt;&lt;&lt; Action routing-instance FBF 
+</code></pre></div></td></tr></table></div> <p>Now let’s analyze the third action by decoding the JNH word <code>0x20129a4c0000000c</code> - <strong>UcodeNH</strong> will execute a micro-code sequence:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh decode word 0x20129a4c0000000c inst 2   
+UcodeNH: Indirect Decode: Indirect, Next = 0x4a693, pnh_id = 0, ,
+</code></pre></div></td></tr></table></div> <p>This is an indirection to a virtual address found in the <strong>Next</strong> field. To read data at <code>0x4a693</code>, use:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh vread vaddr 0x4a693 NH inst 2            
+Addr:Nexthop 0x4a693 Paddr:0x104a693, Data = 0x0812944c00020000
+</code></pre></div></td></tr></table></div> <p>This yields two important values:</p> <ul> <li><strong>Paddr</strong> (physical address): <code>0x104a693</code></li> <li><strong>Data</strong> read: <code>0x0812944c00020000</code></li> </ul> <blockquote> <p>Note: to read a physical address, use <code>show pread paddr xxx</code>.</p> </blockquote> <p>Since this is a JNH word, decode it again:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span>
+<span class=normal>4</span>
+<span class=normal>5</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh decode word 0x0812944c00020000 inst 2    
+CallNH:desc_ptr:0x4a513, mode=0, count=0x3
+  0x04a510  0 : 0x168c000000000000
+  0x04a511  1 : 0x08129d1c00000000
+  0x04a512  2 : 0x23fffffc00000001  &lt;&lt;&lt; this one will be skipped - related to fabric encap. 
+</code></pre></div></td></tr></table></div> <p>Now decode each action (except the third one - out of the scope of this article):</p> <ul> <li>First is a <code>ModifyNH</code> (we modify some bytes of the Local Memory - here we reset en encap len)</li> </ul> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh decode word 0x168c000000000000 inst 2    
+ModifyNH: Subcode=Misc(26)
+(Reset encap len)
+</code></pre></div></td></tr></table></div> <ul> <li>Second points to another JNH word <code>0x1810318100200008</code> - This one is a <strong>CallNH</strong> which means execute a list of NH in order (when <code>mode=O</code>):</li> </ul> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh decode word 0x08129d1c00000000 inst 2    
+CallNH:desc_ptr:0x4a747, mode=0, count=0x1
+  0x04a746  0 : 0x1810318100200008
+</code></pre></div></td></tr></table></div> <p>Decode the first and single NH in the list, <code>0x1810318100200008</code> to reveal a <strong>KTREE</strong> structure used for route lookup:</p> <blockquote> <p>A <strong>KTREE</strong> is the Juniper implementation of a standard binary structure known as <strong>Patricia Tree</strong></p> </blockquote> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh decode word 0x1810318100200008 inst 2    
+KtreeNH: skip=8, sw_token=0, arOffset=0, mode=1, descPtr=0xc60400, key=0x4/0 LookupKey
+</code></pre></div></td></tr></table></div> <p>Use additional options to dump the full KTREE:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span>
+<span class=normal>4</span>
+<span class=normal>5</span>
+<span class=normal>6</span>
+<span class=normal>7</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh decode word 0x1810318100200008 inst 2 ktree yes dump yes 
+Route                                 Depth   JNH
+------------------------------------  ------  ------------------
+Default                                    0  0x08129df400000000
+00000000/32                                1  0x08129d4000000000
+080808/24                                  1  0x0812a04000000000  &lt;&lt;&lt; 8.8.8.0/24 entry
+&lt;- truncated output -&gt;
+</code></pre></div></td></tr></table></div> <p>This KTREE acts as the FIB for our FBF routing-instance. For example, if traffic hits the 8.8.8.0/24 prefix, it’s "redirected" to the action identifed by the JNH word <code>0x0812a04000000000</code> which refers to a list of NH (<strong>CallNH</strong>):</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh decode word 0x0812a04000000000 inst 2    
+CallNH:desc_ptr:0x4a810, mode=0, count=0x1
+  0x04a80f  0 : 0x2012a0a40000000c
+</code></pre></div></td></tr></table></div> <p>Whose the value <code>0x2012a0a40000000c</code> refers to indirection - <strong>UcodeNH</strong>:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh decode word 0x2012a0a40000000c inst 2    
+UcodeNH: Indirect Decode: Indirect, Next = 0x4a829, pnh_id = 0, ,
+</code></pre></div></td></tr></table></div> <p>To read this NH indirection at the virtual address <code>0x4a829</code>:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh vread vaddr 0x4a829 NH inst 2                               
+Addr:Nexthop 0x4a829 Paddr:0x104a829, Data = 0x0812a5fc00000000
+</code></pre></div></td></tr></table></div> <p>One mmore time, we decode the JNH word retrieved from the previous virtual memory address - and we find out a new list of NH (<strong>CallNH</strong>):</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh decode word 0x0812a5fc00000000 inst 2    
+CallNH:desc_ptr:0x4a97f, mode=0, count=0x1
+  0x04a97e  0 : 0x11c0000000038d14
+</code></pre></div></td></tr></table></div> <p>And decode <code>0x11c0000000038d14</code>:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show jnh decode word 0x11c0000000038d14 inst 2    
+ModifyNH: Subcode=SetNH-Token(7),Desc=0x0,Data=0x38d14,NextNH=0
+ (pfeDest:20, TokenIdMode:0/  , VC memberId:0, isReass:0, token:0x38d/909)
+</code></pre></div></td></tr></table></div> <p>We’ve reached the final forwarding result — which will set the forwarding NH index into the <strong>NH Token</strong>. Here, the token <code>0x38d</code> corresponds to the NH ID of our lookup result.</p> <p>You can get more info on this NH:</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal>1</span>
+<span class=normal>2</span>
+<span class=normal>3</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show nh db index 0x38d 
+Index          Type        Func-Type    Proto        Nh-Flags        Ifl-Name        Ifl-Index       Nh-Token        Nh-Prefix
+909            Unicast     -            ipv4_tag     0x1             et-5/0/0.0      356             5187           ac100101/32         
+</code></pre></div></td></tr></table></div> <p>Perfect — this matches expectations. Traffic targeting 8.8.8.0/24 via the FBF routing instance will be forwarded to the core interface <code>et-5/0/0.0</code>.</p> <p>You can dig deeper using this detailed view (to retrieve Layer 2 header information, MPLS encap...)</p> <div class=highlight><table class=highlighttable><tr><td class=linenos><div class=linenodiv><pre><span></span><span class=normal> 1</span>
+<span class=normal> 2</span>
+<span class=normal> 3</span>
+<span class=normal> 4</span>
+<span class=normal> 5</span>
+<span class=normal> 6</span>
+<span class=normal> 7</span>
+<span class=normal> 8</span>
+<span class=normal> 9</span>
+<span class=normal>10</span>
+<span class=normal>11</span>
+<span class=normal>12</span>
+<span class=normal>13</span>
+<span class=normal>14</span>
+<span class=normal>15</span>
+<span class=normal>16</span>
+<span class=normal>17</span>
+<span class=normal>18</span>
+<span class=normal>19</span>
+<span class=normal>20</span>
+<span class=normal>21</span>
+<span class=normal>22</span>
+<span class=normal>23</span>
+<span class=normal>24</span>
+<span class=normal>25</span>
+<span class=normal>26</span>
+<span class=normal>27</span>
+<span class=normal>28</span>
+<span class=normal>29</span>
+<span class=normal>30</span>
+<span class=normal>31</span>
+<span class=normal>32</span>
+<span class=normal>33</span>
+<span class=normal>34</span>
+<span class=normal>35</span>
+<span class=normal>36</span>
+<span class=normal>37</span>
+<span class=normal>38</span>
+<span class=normal>39</span>
+<span class=normal>40</span>
+<span class=normal>41</span>
+<span class=normal>42</span>
+<span class=normal>43</span>
+<span class=normal>44</span>
+<span class=normal>45</span>
+<span class=normal>46</span>
+<span class=normal>47</span>
+<span class=normal>48</span>
+<span class=normal>49</span></pre></div></td><td class=code><div><pre><span></span><code>root@rtme-mx-62-fpc5:pfe&gt; show nh detail index 0x38d 
+Nexthop Info:
+
+NH Index                      : 909
+NH Type                       : Unicast
+NH Proto                      : ipv4_tag
+NH Flags                      : 0x1
+IF Name                       : et-5/0/0.0
+Prefix                        : ac100101/32
+NH Token Id                   : 5187
+NH Route Table Id             : 0
+Sgid                          : 0
+
+OIF Index                     : 356
+Underlying IFL                : .local..0 (0)
+Session Id                    : 788
+Num Tags                      : 1
+Label                         : 0x4e22fff0 (20002)lbFlags: 0
+MTU                           : 0
+L2 Length                     : 12
+L2 Data                       : 00:00:01:64:80:00:a8:d0:e5:ef:6a:87
+Filter Index                  : 0
+
+Platform Info
+-------------
+  FabricToken: 5193
+  EgressToken: 5192
+  IngressFeatures:
+
+Container token: 5187
+#5 SetNhToken tokens:
+ Mask : 0x0
+ [  SetNhToken:5186  ]
+
+  EgressFeatures:
+
+Container token: 5192
+#2 PushLabels tokens:
+ Mask : 0x0
+ [  PushLabels:5188  ]
+#4 StatsCounter tokens:
+ Mask : 0x1
+ [  StatsCounter:5189  ]
+#11 UcastEncap tokens:
+ Mask : 0x0
+ [  UcastEncap:5190  ]
+#12 SetOIF tokens:
+ Mask : 0x0
+ [  SetOIF:5191  ]  
+</code></pre></div></td></tr></table></div> <p>If we repeat the exercise with the 8.8.8.0/24 prefix no longer present in the <code>FBF.inet.0</code> table, any traffic destined for 8.8.8.0/24 will match the default 0/0 route, which redirects to the <code>inet.0</code> table via a <code>next-table</code> action. In this scenario, we would notice slightly longer processing — just a few extra instructions — due to the need for two lookups:</p> <ul> <li>The first lookup occurs in the FBF FIB instance, which triggers the <strong>next-table</strong> action and redirects the processing to the main IPv4 <code>inet.0</code> table,</li> <li>The second lookup happens in the <code>inet.0</code> FIB, where the best route to 8.8.8.0/24 is selected—in our case, through interface et-2/0/0.0, which connects to our PNI.</li> </ul> <blockquote> <p>In this situation, two KTREE structures are involved: first the <code>FBF.inet.0</code> KTREE, followed by the <code>inet.0</code> KTREE.</p> </blockquote> <p>The following figure provides a consolidated view of the packet traversal process and outlines the key steps of the FBF mechanism:</p> <p><img alt="FBF with rib-group at PFE level" src=images/PFE-FBF-2.png></p> <h2 id=conclusion>Conclusion<a class=headerlink href=#conclusion title="Permanent link">&para;</a></h2> <p>In this article, we explored the mechanics of the <strong>Filter-Based Forwarding (FBF)</strong> feature, focusing on how traffic steering is implemented at the PFE level. We demonstrated <strong>two distinct approaches</strong> to configuring and validating FBF behavior. While both are effective, the second method provides <strong>greater flexibility</strong>, making it especially useful for advanced use cases.</p> <p>All tests and examples provided were conducted within the <strong>IPv4 address family</strong>, but it's important to highlight that the same FBF logic and infrastructure are <strong>fully supported for IPv6</strong> as well, offering consistent behavior across protocol versions.</p> <p>By understanding the inner workings of FBF down to the hardware abstraction layer, network engineers can confidently design and validate sophisticated traffic steering policies.</p> <div class=footnote> <hr> <ol> <li id=fn:1> <p>aka. LPM&#160;<a class=footnote-backref href=#fnref:1 title="Jump back to footnote 1 in the text">&#8617;</a></p> </li> </ol> </div> </article> </div> <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script> </div> <button type=button class="md-top md-icon" data-md-component=top hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg> Back to top </button> </main> <footer class=md-footer> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> <div class=md-copyright__highlight> This site is maintained by Juniper Network employees. Powered by Material for MkDocs </div> </div> <div class=md-social> <a href=https://www.linkedin.com/company/juniper-networks target=_blank rel=noopener title=www.linkedin.com class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 448 512"><!-- Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg> </a> <a href=https://github.com/juniper target=_blank rel=noopener title=github.com class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><!-- Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg> </a> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <script id=__config type=application/json>{"base": "../..", "features": ["toc.follow", "navigation.top", "navigation.tabs", "navigation.instant", "navigation.footer", "navigation.indexes", "search.suggest", "content.code.annotate", "content.code.copy", "content.code.select", "content.action.edit", "content.tooltips", "content.footnote.tooltips"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script> <script src=../../assets/javascripts/bundle.c8b220af.min.js></script> <script src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js></script> <script src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js></script> <script src=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js></script> <script src=/addon/math-render.js></script> <script src=/addon/pdf-list.json></script> </body> </html>

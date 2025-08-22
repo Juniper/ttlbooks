@@ -27,9 +27,6 @@ jobs:
           sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-latex-recommended \
                                   texlive-fonts-recommended texlive-fonts-extra
 
-      - name: Install yq
-        run: sudo wget -O /usr/local/bin/yq https://github.com/mikefarah/yq/releases/download/v4.44.1/yq_linux_amd64 && sudo chmod +x /usr/local/bin/yq
-        
       - name: Copy Pandoc templates
         if: github.ref_name == 'main'
         run: |
@@ -55,6 +52,13 @@ jobs:
         if: github.ref_name == 'main'
         run: |
           sudo apt-get install -y poppler-utils
+
+      - name: Patch mkdocs.yml for branch
+        if: github.ref != 'refs/heads/main'
+        run: |
+          BRANCH="${{ github.ref_name }}"
+          pip install pyyaml
+          BRANCH=$BRANCH python3 scripts/patch_mkdocs.py
 
       - name: Build MkDocs site
         run: |

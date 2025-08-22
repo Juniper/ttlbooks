@@ -134,6 +134,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
           publish_branch: gh-pages
-          destination_dir: ${{ github.ref_name == 'main' && '.' || github.ref_name }}
+          publish_dir: ./site
+          keep_files: true
+          destination_dir: ${{ github.ref_name != 'main' && github.ref_name || '' }}

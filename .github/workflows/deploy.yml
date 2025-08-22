@@ -136,5 +136,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
           publish_branch: gh-pages
-          # If it's main -> root, else -> subfolder
           destination_dir: ${{ github.ref_name == 'main' && '.' || github.ref_name }}

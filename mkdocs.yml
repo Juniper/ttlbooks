@@ -4,10 +4,6 @@ nav:
   - All Books:
     - Select a book: books/menu/main.md
     - Sample Book: books/sample_book/main.md
-    - Ceci est un test:
-      - Chapitre 1: books/my_book_5G/main.md
-      - Chapitre 2: books/my_book_5G/chapter1.md
-      - Chapitre 3: books/my_book_5G/chapter2.md
   - Download PDFs: download.md
   - About us: about.md
 docs_dir: 'docs'

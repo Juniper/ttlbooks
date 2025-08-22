@@ -126,6 +126,9 @@ jobs:
           pdf_files_json=$(IFS=, ; echo "[${pdf_files[*]}]")
           echo "$pdf_files_json" > "$OUTPUT_FILE"
           echo "Generated $OUTPUT_FILE"
+          
+      - name: List site output
+        run: ls -R ./site
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

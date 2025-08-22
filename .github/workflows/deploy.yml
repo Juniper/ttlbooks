@@ -161,8 +161,9 @@ jobs:
         run: |
           set -euo pipefail
 
-          # Folder where branch previews are deployed inside gh-pages branch
-          PAGES_ROOT=./site  # adjust if different
+          PAGES_ROOT=./site  # root of gh-pages content
+          # Directories to never remove (main site folders)
+          WHITELIST="addon assets books download images search stylesheets"
 
           echo "Fetching list of active branches..."
           ACTIVE_BRANCHES=$(gh api repos/${GITHUB_REPOSITORY}/branches --jq '.[].name')
@@ -174,8 +175,10 @@ jobs:
           for dir in "$PAGES_ROOT"/*; do
             if [ -d "$dir" ]; then
               branch_name=$(basename "$dir")
-              # Skip main site folder if any
-              if [ "$branch_name" = "main" ]; then
+
+              # Skip whitelisted folders
+              if echo "$WHITELIST" | grep -qw "$branch_name"; then
+                echo "Skipping main site folder: $branch_name"
                 continue
               fi
 

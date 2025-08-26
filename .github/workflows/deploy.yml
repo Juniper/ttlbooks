@@ -47,29 +47,36 @@ jobs:
           pip install mkdocs-minify-plugin
           pip install markdown-katex
           pip install markdown-captions
+          pip install mkdocs-enumerate-headings-plugin
+          pip install pyyaml
 
       - name: Install PDF utilities
         if: github.ref_name == 'main'
         run: |
           sudo apt-get install -y poppler-utils
-
-      - name: Patch mkdocs.yml for branch
-        if: github.ref != 'refs/heads/main'
-        run: |
-          BRANCH="${{ github.ref_name }}"
-          pip install pyyaml
-          BRANCH=$BRANCH python3 .github/scripts/patch_mkdocs.py
-
-      - name: Override Home page for branch
-        if: github.ref != 'refs/heads/main'
-        run: |
-          BRANCH="${{ github.ref_name }}"
-          mkdir -p docs
-          echo "# WORK IN PROGRESS
-          This is the branch work page **$BRANCH**" > docs/index.md
           
       - name: Build MkDocs site
         run: |
+          BRANCH="${{ github.ref_name }}"
+          if [ BRANCH != "main" ]; then
+
+            echo "Patching mkdocs.yml"
+            BRANCH=$BRANCH python3 .github/scripts/patch_mkdocs.py
+
+            mkdir -p docs
+            echo "# WORK IN PROGRESS
+            This is the branch work page **$BRANCH**" > docs/index.md
+            cd ..
+          fi
+
+          echo "Add numbering for books only"
+          python3 .github/scripts/enumerate-headings.py
+
+          echo "==== mkdocs.yml content before build ===="
+          cat mkdocs.yml
+          echo "========================================="
+
+          echo "Building site"
           mkdocs build
 
       - name: Build PDFs from books
@@ -104,6 +111,8 @@ jobs:
                 echo "" >> combined.md
                 echo "\pagebreak" >> combined.md 
               done
+              echo "cleanup md references"
+              python3 ../../../..github/scripts/clean_md_links.py combined.md
               sed -i -e 's/<a\s*[^>]*id="\([^"]*\)"[^>]*>/\\label{\1}/g' -e 's/\xC2\xA0/ /g' combined.md
               pandoc -s --listings --template "/usr/share/pandoc/data/templates/custom.latex" \
                      --metadata-file header.yml --output="${book%/}.pdf" combined.md

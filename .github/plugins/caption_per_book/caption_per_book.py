@@ -48,8 +48,7 @@ class CaptionPerBookPlugin(BasePlugin):
                         "num_tab": num_tab
                     })
                     self.page_to_book[src_uri] = book_name
-                    #print(f"[DEBUG] Collected page: {src_uri} in book: {book_name} "
-                          f"(figures={num_fig}, tables={num_tab})")
+                    #print(f"[DEBUG] Collected page: {src_uri} in book: {book_name} f"(figures={num_fig}, tables={num_tab})")
             for child in getattr(item, "children", []) or []:
                 collect(child)
 

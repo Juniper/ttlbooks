@@ -108,8 +108,8 @@ jobs:
               cat /dev/null > combined.md
               for file in $md_files; do
                 sed '/^---$/,/^---$/d' "$file" >> combined.md
-                echo "" >> combined.md
                 echo "\pagebreak" >> combined.md 
+                echo "" >> combined.md
               done
               echo "cleanup md references"
               python3 ../../../..github/scripts/clean_md_links.py combined.md

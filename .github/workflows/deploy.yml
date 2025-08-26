@@ -101,8 +101,8 @@ jobs:
               cat /dev/null > combined.md
               for file in $md_files; do
                 sed '/^---$/,/^---$/d' "$file" >> combined.md
-                echo "" >> combined.md
                 echo "\pagebreak" >> combined.md 
+                echo "" >> combined.md
               done
               sed -i -e 's/<a\s*[^>]*id="\([^"]*\)"[^>]*>/\\label{\1}/g' -e 's/\xC2\xA0/ /g' combined.md
               pandoc -s --listings --template "/usr/share/pandoc/data/templates/custom.latex" \

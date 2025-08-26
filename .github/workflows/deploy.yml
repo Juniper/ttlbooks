@@ -68,7 +68,7 @@ jobs:
             This is the branch work page **$BRANCH**" > docs/index.md
             cd ..
           fi
-
+          pwd
           echo "Add numbering for books only"
           python3 .github/scripts/enumerate-headings.py
 

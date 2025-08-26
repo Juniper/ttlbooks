@@ -114,7 +114,7 @@ jobs:
                 echo "" >> combined.md
               done
               echo "cleanup md references"
-              python3 ../../../..github/scripts/clean_md_links.py combined.md
+              python3 ../../../.github/scripts/clean_md_links.py combined.md
               sed -i -e 's/<a\s*[^>]*id="\([^"]*\)"[^>]*>/\\label{\1}/g' -e 's/\xC2\xA0/ /g' combined.md
               pandoc -s --listings --template "/usr/share/pandoc/data/templates/custom.latex" \
                      --metadata-file header.yml --output="${book%/}.pdf" combined.md

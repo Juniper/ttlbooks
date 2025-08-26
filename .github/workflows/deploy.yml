@@ -69,6 +69,8 @@ jobs:
             cd ..
           fi
           pwd
+          ls -lia 
+          ls -lia .github/scripts/
           echo "Add numbering for books only"
           python3 .github/scripts/enumerate-headings.py
 

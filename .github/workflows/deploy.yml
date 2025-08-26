@@ -46,7 +46,6 @@ jobs:
           pip install mkdocs-gen-files
           pip install mkdocs-minify-plugin
           pip install markdown-katex
-          pip install markdown-captions
           pip install mkdocs-enumerate-headings-plugin
           pip install pyyaml
 
@@ -72,7 +71,7 @@ jobs:
           ls -lia 
           ls -lia .github/scripts/
           echo "Add numbering for books only"
-          python3 .github/scripts/enumerate-headings.py
+          BRANCH=$BRANCH python3 .github/scripts/enumerate-headings.py
 
           echo "==== mkdocs.yml content before build ===="
           cat mkdocs.yml

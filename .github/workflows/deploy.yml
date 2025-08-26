@@ -60,15 +60,14 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE
           BRANCH="${{ github.ref_name }}"
-          if [ BRANCH != "main" ]; then
+          if [ "$BRANCH" != "main" ]; then
 
             echo "Patching mkdocs.yml"
-            python3 .github/scripts/patch_mkdocs.py
+            BRANCH=$BRANCH python3 .github/scripts/patch_mkdocs.py
 
             mkdir -p docs
             echo "# WORK IN PROGRESS
             This is the branch work page **$BRANCH**" > docs/index.md
-            cd ..
           fi
 
           echo "Add numbering for books only"

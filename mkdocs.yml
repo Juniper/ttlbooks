@@ -1,9 +1,12 @@
-site_name: TTLBooks - A technical eBook collection by Juniper 
+site_name: Day One books - A technical eBook collection by Juniper
 nav:
   - Home: index.md
   - All Books:
     - Select a book: books/menu/main.md
-    - Sample Book: books/sample_book/main.md
+    - The Sample Day One Book: 
+      - Introduction: books/sample_book/main.md
+      - FBF Use Case 1: books/sample_book/chapter1.md
+      - FBF use Case 2: books/sample_book/chapter2.md
   - Download PDFs: download.md
   - About us: about.md
 docs_dir: 'docs'
@@ -49,8 +52,9 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/juniper
   generator: false
-copyright: "This site is maintained by Juniper Network employees. Powered by Material for MkDocs"
+copyright: "This site is maintained by HPE/Juniper Networking employees. Powered by Material for MkDocs & Pandoc"
 plugins:
+  - caption-per-book
   - search:
       separator: '[\s\-\_]'
   - minify:
@@ -60,16 +64,19 @@ markdown_extensions:
   - markdown_katex
   - toc:
       permalink: true
+      toc_depth: 3
   - pymdownx.highlight:
       linenums: true 
       guess_lang: false  
       use_pygments: true  
 extra_css:
   - https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css
+  - https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css
   - stylesheets/extra.css
 extra_javascript:
+  - https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js
   - https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js
   - https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js
-  - /addon/math-render.js
-  - /addon/pdf-list.json
+  - js/math-render.js
+  - js/extra.js

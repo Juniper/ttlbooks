@@ -48,6 +48,8 @@ jobs:
           pip install markdown-katex
           pip install mkdocs-enumerate-headings-plugin
           pip install pyyaml
+          cd $GITHUB_WORKSPACE
+          pip install . 
 
       - name: Install PDF utilities
         if: github.ref_name == 'main'
@@ -56,22 +58,21 @@ jobs:
           
       - name: Build MkDocs site
         run: |
+          cd $GITHUB_WORKSPACE
           BRANCH="${{ github.ref_name }}"
           if [ BRANCH != "main" ]; then
 
             echo "Patching mkdocs.yml"
-            BRANCH=$BRANCH python3 .github/scripts/patch_mkdocs.py
+            python3 .github/scripts/patch_mkdocs.py
 
             mkdir -p docs
             echo "# WORK IN PROGRESS
             This is the branch work page **$BRANCH**" > docs/index.md
             cd ..
           fi
-          pwd
-          ls -lia 
-          ls -lia .github/scripts/
+
           echo "Add numbering for books only"
-          BRANCH=$BRANCH python3 .github/scripts/enumerate-headings.py
+          python3 .github/scripts/enumerate-headings.py
 
           echo "==== mkdocs.yml content before build ===="
           cat mkdocs.yml
@@ -83,6 +84,7 @@ jobs:
       - name: Build PDFs from books
         if: github.ref_name == 'main'
         run: |
+          cd $GITHUB_WORKSPACE
           PDF_DIR=site/download
           echo "Saving PDFs to $PDF_DIR"
           mkdir -p "$PDF_DIR"
@@ -130,6 +132,7 @@ jobs:
       - name: Generate pdf-list.json and thumbnails
         if: github.ref_name == 'main'
         run: |
+          cd $GITHUB_WORKSPACE
           PDF_DIR=site/download
           OUTPUT_FILE="$PDF_DIR/pdf-list.json"
 

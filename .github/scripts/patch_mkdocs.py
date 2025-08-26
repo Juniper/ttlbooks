@@ -2,6 +2,7 @@
 import os
 import sys
 import yaml
+import json
 
 branch = os.environ.get("BRANCH")
 if not branch:
@@ -13,7 +14,13 @@ with open(mkdocs_file) as f:
     config = yaml.safe_load(f)
 
 # Update site_name
-config["site_name"] = f"TTL Books - This is a work in progress site for the branch {branch}"
+config["site_name"] = f"Day One Books - This is a work in progress site for the branch {branch}"
+
+# Update site_dir based on branch
+if branch == "main":
+    config["site_dir"] = "/var/www/html/main"
+else:
+    config["site_dir"] = f"/var/www/html/{branch}"
 
 def filter_nav(nav):
     """
@@ -46,6 +53,7 @@ if not filtered_nav:
     sys.exit(1)
 
 config["nav"] = filtered_nav
+print (json.dumps(config, indent=2))
 
 with open(mkdocs_file, "w") as f:
     yaml.dump(config, f, sort_keys=False)

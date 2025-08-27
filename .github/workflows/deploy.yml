@@ -132,13 +132,13 @@ jobs:
 
                   if [ -f "${book%/}.pdf" ]; then
                       echo "PDF generated successfully for $book"
-                      cp "${book%/}.pdf" "$PDF_DIR"
+                      cp "${book%/}.pdf" ../../../"$PDF_DIR/"
                       pdf_files+=("\"${book%/}.pdf\"")
 
                       # Generate PNG icons for the PDF
                       echo "Generating icon for ${book%/}.pdf"
                       output_png="$PDF_DIR/${book%/}"
-                      pdftoppm -png -f 1 -l 1 -singlefile "${book%/}.pdf" "$output_png"
+                      pdftoppm -png -f 1 -l 1 -singlefile "${book%/}.pdf" ../../../"$PDF_DIR"/"$output_png"
 
                       if [ -f "$output_png.png" ]; then
                           echo "Cleaning up markdown for EPUB"
@@ -147,7 +147,7 @@ jobs:
                           pandoc -s --number-sections --metadata-file=header-epub.yml --epub-cover-image="$output_png.png" --output="${book%/}.epub" combined-epub.md
                           if [ -f "${book%/}.epub" ]; then
                               echo "EPUB generated successfully for $book"
-                              cp "${book%/}.epub" "$PDF_DIR"
+                              cp "${book%/}.epub" ../../../"$PDF_DIR/"
                           else
                               echo "Failed to generate EPUB for $book. See pandoc.log for details."
                           fi

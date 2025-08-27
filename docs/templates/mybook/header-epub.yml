@@ -1,0 +1,16 @@
+---
+title: ”Your title"               <<<< EDIT
+subtitle: ”Your Subtitle"         <<<< EDIT
+author: John, Peter               <<<< EDIT
+date: "2025-01-06"                <<<< EDIT
+subject: ”My Topic"               <<<< EDIT
+keywords: [keyword1, keyword2]    <<<< EDIT
+lang: "en"
+number-sections: true
+toc: true
+rights: "© 2025 Juniper/MPE Networking"
+css: "../../../rendering/custom_epub.css"
+header-includes:
+  - \usepackage{etoolbox}
+  - \preto{\section}{\clearpage}
+---

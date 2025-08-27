@@ -29,4 +29,5 @@ footnotes-pretty: true
 link-citations: true
 link-headers: true
 colorlinks: true
+number-sections: true
 ---

@@ -1,0 +1,16 @@
+---
+title: Filter Based Forwarding on MX
+subtitle: Several examples of FBF on MX
+author: David Roy
+date: "2025-04-10"
+subject: ”FBF on MX"
+keywords: [FBF, PBR, MX]
+lang: "en"
+number-sections: true
+toc: true
+rights: "© 2025 Juniper/MPE Networking"
+css: "../../../rendering/custom_epub.css"
+header-includes:
+  - \usepackage{etoolbox}
+  - \preto{\section}{\clearpage}
+---

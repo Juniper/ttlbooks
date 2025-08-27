@@ -1,0 +1,92 @@
+/* ===== Base text ===== */
+body {
+  font-family: "Times New Roman", serif;
+  font-size: 0.9em;       /* smaller than default */
+  line-height: 1.4;
+  margin: 1em;
+  text-align: justify;
+}
+
+/* ===== Headings ===== */
+h1, h2, h3, h4 {
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+}
+
+/* ===== Code blocks ===== */
+code, pre {
+  font-family: "Courier New", monospace;
+  font-size: 0.8em;       /* smaller than body */
+  background: #f4f4f4;
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
+  display: block;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Inline code */
+code {
+  display: inline;
+  padding: 0.1em 0.3em;
+}
+
+/* ===== Images ===== */
+img {
+  max-width: 95%;        /* increased from 90% */
+  margin: auto;
+  display: block;
+}
+
+/* ===== Tables ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em auto;
+  font-size: 0.9em;
+}
+
+th, td {
+  border: 1px solid #666;
+  padding: 0.4em 0.6em;
+}
+
+th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ===== Captions (for figures & tables) ===== */
+figcaption, caption {
+  font-size: 0.85em;
+  font-style: italic;
+  text-align: center;
+  margin-top: 0.3em;
+  counter-increment: figurenum;
+}
+
+/* ===== Automatic numbering ===== */
+
+/* Figures */
+figure {
+  counter-increment: figure;
+}
+
+figure figcaption::before {
+  content: "Figure " counter(figure) ": ";
+  font-weight: bold;
+}
+
+/* Tables */
+table {
+  counter-increment: table;
+}
+
+caption::before {
+  content: "Table " counter(table) ": ";
+  font-weight: bold;
+}

@@ -22,8 +22,16 @@
 }
 /* ✅ More specific image rule for MkDocs' .md-typeset content
    (redundant with the above "img", but ensures priority inside MkDocs) */
+.md-typeset img[width] {
+  max-width: none !important;
+  height: auto !important;
+  display: block  !important;
+  margin-left: auto  !important;
+  margin-right: auto !important;
+}
+
 .md-typeset img {
-  max-width: 60% !important;
+  max-width: 70% !important;
   height: auto !important;
   display: block  !important;
   margin-left: auto  !important;

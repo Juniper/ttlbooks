@@ -1,6 +1,53 @@
+.md-typeset a.glightbox {
+  position: relative;
+  display: inline-block;
+  cursor: zoom-in;
+}
+
+.md-typeset a.glightbox::after {
+  content: "\1F50D"; /* 🔍 Unicode magnifying glass icon */
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 1.2em;
+  color: rgba(255,255,255,0.8);
+  text-shadow: 0 0 2px #000;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.md-typeset a.glightbox:hover::after {
+  opacity: 1;
+}
+/* ✅ More specific image rule for MkDocs' .md-typeset content
+   (redundant with the above "img", but ensures priority inside MkDocs) */
+.md-typeset img {
+  max-width: 60% !important;
+  height: auto !important;
+  display: block  !important;
+  margin-left: auto  !important;
+  margin-right: auto !important;
+}
+
+/* ✅ Center ALL Markdown tables */
+.md-typeset .md-typeset__table {
+  display: flex;           /* wrapper adapts to table size */
+  justify-content: center; /* centers table horizontally */
+}
+
+.md-typeset .md-typeset__table table {
+  width: max-content;  /* table shrinks to fit its content */
+  max-width: 100%;     /* still responsive, won’t overflow */
+  margin: 0 auto;      /* fallback centering */
+}
+
+/* ✅ Adjust page grid (wider container than default MkDocs Material) */
 .md-grid {
   max-width: 85rem;
 }
+
+/* ✅ Adjust heading spacing */
 .md-typeset h1 {
   margin: 0 0 0.25em;
 }
@@ -8,6 +55,7 @@
   margin: 0.6em 0 .64em;
 }
 
+/* ✅ Footer custom styling */
 .mdx-content__footer {
   margin-top: 20px;
   text-align: center;
@@ -32,28 +80,28 @@
   border: none;
 }
 
-/* ✅ Header background (barre du haut) */
+/* ✅ Header + navigation bar (default theme) */
 [data-md-color-scheme="default"] .md-header,
 [data-md-color-scheme="default"] .md-header__inner {
   background-color: #01a982 !important;
 }
 
-/* ✅ Tabs navigation (barre en-dessous) */
+/* ✅ Tabs bar (default theme) */
 [data-md-color-scheme="default"] .md-tabs {
   background-color: #01a982 !important;
 }
 
-/* ✅ Texte actif dans les tabs (optionnel) */
+/* ✅ Active tab text color */
 [data-md-color-scheme="default"] .md-tabs__item--active > .md-tabs__link {
   color: white !important;
 }
 
-/* ✅ Autres éléments pour unifier (hover, etc.) */
+/* ✅ Hover state on tab links */
 [data-md-color-scheme="default"] .md-tabs__link:hover {
   color: white;
 }
 
-/* ✅ Idem pour le mode sombre */
+/* ✅ Same but for dark theme (slate) */
 [data-md-color-scheme="slate"] .md-header,
 [data-md-color-scheme="slate"] .md-header__inner,
 [data-md-color-scheme="slate"] .md-tabs {
@@ -64,59 +112,68 @@
   color: white !important;
 }
 
-/* ✅ Footer couleur personnalisée */
+/* ✅ Footer (light theme) */
 [data-md-color-scheme="default"] .md-footer {
   background-color: #01a982 !important;
   color: white !important;
 }
 
-/* ✅ Pied de page mode sombre */
+/* ✅ Footer (dark theme) */
 [data-md-color-scheme="slate"] .md-footer {
   background-color: #008567 !important;
   color: white !important;
 }
 
-/* ✅ Liens dans le footer (ex: "made with ❤️") */
+/* ✅ Footer links */
 .md-footer a {
   color: white !important;
 }
 
-/* Base style */
+/* ✅ Custom pill-shaped button */
 .custom-button {
   display: inline-block;
   padding: 0.6em 1.2em;
   background-color: #00739d;
   color: white !important;
-  border-radius: 6px;
+  border-radius: 999px; /* makes it pill-shaped */
   font-weight: 600;
   text-decoration: none;
   transition: background-color 0.2s ease;
-  border-radius: 999px; /* fully pill-shaped */
 }
 
+/* ✅ Font Awesome icons inside custom buttons */
 .custom-button svg.svg-inline--fa {
   width: 2em;
   height: 2em;
   vertical-align: middle;
   margin-right: 0.4em;
-  transform: translateY(2px); /* fine-tune vertical alignment */
-  color: white; /* optional: force icon color */
+  transform: translateY(2px); /* tweak alignment */
+  color: white; /* ensures icons are white */
 }
 
-/* Hover effect */
+/* ✅ Hover effect on custom button */
 .custom-button:hover {
   background-color: #00739d;
 }
 
-/* Optional: adjust for dark mode if needed */
+/* ✅ Dark mode button color (same as default here) */
 [data-md-color-scheme="slate"] .custom-button {
   background-color: #00739d;
 }
 
+/* ✅ Card component styling */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 400px); 
+  grid-auto-rows: 150px;                   /* fixed height same as card */
+  gap: 1.5rem;
+  justify-content: center;                  /* center if row not full */
+}
+
 .card {
   display: flex;
-  width: 500px;                /* Fixed width for consistency */
-  height: 150px;               /* Optional: set fixed height too */
+  width: 400px;                /* fixed width (could be made responsive) */
+  height: 170px;               /* fixed height */
   align-items: center;
   gap: 1rem;
   border-radius: 12px;
@@ -126,6 +183,7 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   background-color: #00739d;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-top: 2rem;
 }
 
 [data-md-color-scheme="slate"] .card {
@@ -137,6 +195,7 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* ✅ Card image (fixed size, prevents stretching) */
 .card-icon {
   width: 144px;
   height: 144px;
@@ -144,6 +203,7 @@
   flex-shrink: 0;
 }
 
+/* ✅ Text inside card */
 .card-text {
   display: flex;
   flex-direction: column;
@@ -151,12 +211,12 @@
 
 .card-title {
   color: white;
-  font-size: 1.25rem;
+  font-size: 0.95rem;
   font-weight: bold;
   margin-bottom: 0.25rem;
 }
 
 .card-subtitle {
-  font-size: 0.95rem;
+  font-size: 0.65rem;
   color: rgba(255, 255, 255, 0.85);
 }

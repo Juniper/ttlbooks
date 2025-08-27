@@ -137,8 +137,8 @@ jobs:
 
                       # Generate PNG icons for the PDF
                       echo "Generating icon for ${book%/}.pdf"
-                      output_png="$PDF_DIR/${book%/}"
-                      pdftoppm -png -f 1 -l 1 -singlefile "${book%/}.pdf" ../../../"$PDF_DIR"/"$output_png"
+                      output_png=../../../"$PDF_DIR/${book%/}"
+                      pdftoppm -png -f 1 -l 1 -singlefile "${book%/}.pdf" "$output_png"
 
                       if [ -f "$output_png.png" ]; then
                           echo "Cleaning up markdown for EPUB"

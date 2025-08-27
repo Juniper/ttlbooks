@@ -86,14 +86,12 @@ jobs:
           cd $GITHUB_WORKSPACE
           PDF_DIR=site/download
           OUTPUT_FILE="$PDF_DIR/pdf-list.json"
-          echo "Saving PDFs to $PDF_DIR"
           mkdir -p "$PDF_DIR"
 
           cd docs/books || exit 1
           book_dirs=$(find . -mindepth 1 -maxdepth 1 -type d ! -name '.*')
           if [ -z "$book_dirs" ]; then
               echo "No actual book directories found in docs/books. Skipping PDF build."
-              echo "[]" > "$OUTPUT_FILE"
               exit 0
           fi
 
@@ -160,9 +158,8 @@ jobs:
               else
                   echo "No markdown files found for $book. Skipping PDF generation."
               fi
-              cd ..
           done
-
+          cd $GITHUB_WORKSPACE
 
           # Write JSON list of PDFs
           pdf_files_json=$(IFS=, ; echo "[${pdf_files[*]}]")

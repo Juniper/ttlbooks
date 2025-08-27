@@ -32,6 +32,7 @@ theme:
     text: Google Sans
     code: Nova
   features:
+    - attr_list
     - toc.follow
     - navigation.top
     - navigation.tabs

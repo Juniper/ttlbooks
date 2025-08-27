@@ -10,7 +10,7 @@ With FBF, we alter the ingress lookup behavior in one of the following ways:
 - Using a "proxy" or alias IP address as the lookup key (as shown in our example below);
 - Leveraging a specific, constrained forwarding instance to influence the lookup outcome.
 
-![FBF concepts](images/diag0.png)
+![FBF concepts](images/diag0.png){width=100%}
 
 To summarize, on Juniper platforms, FBF can generally be implemented using two main approaches. The first is more straightforward and involves minimal configuration, but offers limited flexibility. It uses a single firewall filter to directly redirect traffic. The second approach requires slightly more configuration but offers more granular traffic handling.
 

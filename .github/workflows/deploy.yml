@@ -47,6 +47,7 @@ jobs:
           pip install mkdocs-minify-plugin
           pip install markdown-katex
           pip install pyyaml
+          pip install bs4
           cd $GITHUB_WORKSPACE
           pip install . 
 

@@ -41,12 +41,25 @@ img {
   display: block;
 }
 
-/* ===== Tables ===== */
+/* ===== Captions (for figures & tables) ===== */
+figcaption, caption {
+  font-size: 0.85em;
+  font-style: italic;
+  text-align: center;
+  margin-top: 0.3em;
+}
+
+figure figcaption::before {
+  font-weight: bold;
+}
+
+/* ===== Tables (global numbering) ===== */
 table {
   width: 100%;
   border-collapse: collapse;
   margin: 1em auto;
   font-size: 0.9em;
+  counter-increment: table; /* increments globally */
 }
 
 th, td {
@@ -60,33 +73,6 @@ th {
   text-align: center;
 }
 
-/* ===== Captions (for figures & tables) ===== */
-figcaption, caption {
-  font-size: 0.85em;
-  font-style: italic;
-  text-align: center;
-  margin-top: 0.3em;
-  counter-increment: figurenum;
-}
-
-/* ===== Automatic numbering ===== */
-
-/* Figures */
-figure {
-  counter-increment: figure;
-}
-
-figure figcaption::before {
-  content: "Figure " counter(figure) ": ";
-  font-weight: bold;
-}
-
-/* Tables */
-table {
-  counter-increment: table;
-}
-
-caption::before {
-  content: "Table " counter(table) ": ";
+table > caption::before {
   font-weight: bold;
 }

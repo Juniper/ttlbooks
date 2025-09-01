@@ -2,7 +2,6 @@
 import os
 import sys
 import yaml
-import json
 
 branch = os.environ.get("BRANCH")
 if not branch:
@@ -53,7 +52,6 @@ if not filtered_nav:
     sys.exit(1)
 
 config["nav"] = filtered_nav
-print (json.dumps(config, indent=2))
 
 with open(mkdocs_file, "w") as f:
     yaml.dump(config, f, sort_keys=False)

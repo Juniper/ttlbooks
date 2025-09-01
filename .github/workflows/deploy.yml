@@ -46,7 +46,6 @@ jobs:
           pip install mkdocs-gen-files
           pip install mkdocs-minify-plugin
           pip install markdown-katex
-          pip install mkdocs-enumerate-headings-plugin
           pip install pyyaml
           cd $GITHUB_WORKSPACE
           pip install . 
@@ -59,7 +58,9 @@ jobs:
       - name: Build MkDocs site
         run: |
           cd $GITHUB_WORKSPACE
-          BRANCH="${{ github.ref_name }}"
+          BRANCH="${GITHUB_HEAD_REF:-$GITHUB_REF_NAME}"
+          echo "Branch detected: $BRANCH"
+
           if [ "$BRANCH" != "main" ]; then
 
             echo "Patching mkdocs.yml"
@@ -67,11 +68,8 @@ jobs:
 
             mkdir -p docs
             echo "# WORK IN PROGRESS
-            This is the branch work page **$BRANCH**" > docs/index.md
+            This is the branch work page **$BRANCH** - click on Your-Book menu" > docs/index.md
           fi
-
-          echo "Add numbering for books only"
-          python3 .github/scripts/enumerate-headings.py
 
           echo "==== mkdocs.yml content before build ===="
           cat mkdocs.yml
@@ -141,8 +139,10 @@ jobs:
                       if [ -f "$output_png.png" ]; then
                           echo "Cleaning up markdown for EPUB"
                           python3 ../../../.github/scripts/clean_for_epub.py combined.md combined-epub.md
+                          echo "Generating mumbering for sections, figures and tables for EPUB"
+                          python3 ../../../.github/scripts/epub_numbering.py combined-epub.md
                           echo "Generating EPUB for ${book%/}.epub"
-                          pandoc -s --number-sections --metadata-file=header-epub.yml --epub-cover-image="$output_png.png" --output="${book%/}.epub" combined-epub.md
+                          pandoc -s --metadata-file=header-epub.yml --epub-cover-image="$output_png.png" --output="${book%/}.epub" combined-epub.md
                           if [ -f "${book%/}.epub" ]; then
                               echo "EPUB generated successfully for $book"
                               cp "${book%/}.epub" ../../../"$PDF_DIR/"

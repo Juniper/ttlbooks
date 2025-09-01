@@ -36,7 +36,7 @@ def escape_placeholders(text):
     escaped = placeholder_pattern.sub(replacer, text)
     
     # remove any line containing only \pagebreak (or optional spaces)
-    escaped = re.sub(r'^\s*\\pagebreak\s*$\n?', '', escaped, flags=re.MULTILINE)
+    escaped = re.sub(r'^\s*\\pagebreak\s*$\n?', '\n', escaped, flags=re.MULTILINE)
     
     return escaped
 

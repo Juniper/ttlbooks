@@ -7,7 +7,8 @@ setup(
     package_dir={"": ".github/plugins"},
     entry_points={
         "mkdocs.plugins": [
-            "caption-per-book = caption_per_book.caption_per_book:CaptionPerBookPlugin"
+            "caption-per-book = caption_per_book.caption_per_book:CaptionPerBookPlugin",
+            "book-enumerate = book_enumerate.book_enumerate:BookEnumeratePlugin",
         ]
     },
 )
